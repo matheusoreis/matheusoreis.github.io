@@ -1,0 +1,84 @@
+/*--------------------------------------------------------------
+Seção do Hero
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-bg.jpg") top right no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  @media (min-width: 992px) {
+    #hero {
+      padding-left: 160px;
+    }
+  }
+  
+  #hero:before {
+    content: "";
+    background: #33195f5f;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Título da Hero */
+  #hero h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #ffffff;
+  }
+  
+  /* Subtítulo da Hero */
+  #hero p {
+    color: #ffffff;
+    margin: 15px 0 0 0;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Profissões */
+  #hero p span {
+    color: var(--primary__hover);
+    letter-spacing: 1px;
+  }
+  
+  /* Ícones das Redes Sociais */
+  #hero .social-links {
+    margin-top: 30px;
+  }
+  
+  #hero .social-links a {
+    font-size: 32px;
+    display: inline-block;
+    color: var(--primary__hover);
+    line-height: 1;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
+  
+  #hero .social-links a:hover {
+    color: var(--primary__hover);
+  }
+  
+  @media (max-width: 992px) {
+    #hero {
+      text-align: center;
+    }
+  
+    #hero h1 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  
+    #hero p {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }

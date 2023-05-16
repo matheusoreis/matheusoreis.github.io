@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+Seção do header
+--------------------------------------------------------------*/
+#header {
+    position: fixed;
+    float: left;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 15px;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 991px) {
+    #header {
+      width: 300px;
+      background: #181818d8;
+      left: -300px;
+    }
+  }
+  
+  @media (min-width: 991px) {
+    #main {
+      margin-left: 100px;
+    }
+  }
