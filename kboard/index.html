@@ -14,37 +14,39 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-
         <link rel="stylesheet" href="oat.min.css" />
         <link rel="stylesheet" href="index.css" />
-
         <title>kboard</title>
     </head>
     <body>
         <header id="topbar">
             <nav class="hstack">
+                <strong class="app-name">kboard</strong>
+                <span id="file-label" style="display: none"></span>
                 <span style="flex: 1"></span>
-                <menu class="buttons">
-                    <li>
-                        <button id="btn-import">
-                            <i
-                                class="ti ti-file-upload-filled"
-                                style="font-size: 22px"
-                            ></i>
-                            Importar
-                        </button>
-                    </li>
-                    <li>
-                        <button id="btn-export">
-                            <i
-                                class="ti ti-file-download-filled"
-                                style="font-size: 22px"
-                            ></i>
-                            Exportar
-                        </button>
-                    </li>
-                </menu>
-                <input type="file" id="file-import" accept=".json" hidden />
+                <div style="display: flex; gap: var(--space-2)">
+                    <button id="btn-open">
+                        <i
+                            class="ti ti-file-upload-filled"
+                            style="font-size: 22px"
+                        ></i>
+                        Abrir
+                    </button>
+                    <button id="btn-save-file">
+                        <i
+                            class="ti ti-device-floppy"
+                            style="font-size: 22px"
+                        ></i>
+                        Salvar
+                    </button>
+                    <button id="btn-export" style="display: none">
+                        <i
+                            class="ti ti-file-download-filled"
+                            style="font-size: 22px"
+                        ></i>
+                        Exportar
+                    </button>
+                </div>
             </nav>
         </header>
 
@@ -87,6 +89,7 @@
             </section>
         </main>
 
+        <!-- Card dialog -->
         <dialog id="card-dialog" closedby="any">
             <form method="dialog">
                 <header>
@@ -98,7 +101,8 @@
                         <input
                             type="text"
                             id="input-title"
-                            placeholder="Título"
+                            placeholder="Título do card…"
+                            autocomplete="off"
                         />
                     </label>
                     <label data-field>
@@ -106,9 +110,18 @@
                         <textarea
                             id="input-desc"
                             rows="3"
-                            placeholder="Descrição"
+                            placeholder="Descrição (opcional)…"
                         ></textarea>
                     </label>
+                    <div data-field>
+                        <span class="field-label">Prioridade</span>
+                        <div id="priority-btns" class="priority-group"></div>
+                    </div>
+                    <div
+                        id="date-info"
+                        class="date-info"
+                        style="display: none"
+                    ></div>
                 </div>
                 <footer class="hstack">
                     <button
@@ -128,6 +141,7 @@
             </form>
         </dialog>
 
+        <!-- Confirm delete dialog -->
         <dialog id="confirm-dialog" closedby="any">
             <form method="dialog">
                 <header>
@@ -153,6 +167,6 @@
             </form>
         </dialog>
 
-        <script src="index.js"></script>
+        <script type="module" src="index.js"></script>
     </body>
 </html>
