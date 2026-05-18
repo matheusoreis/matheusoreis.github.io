@@ -1,0 +1,153 @@
+:root {
+    --background: #f0f4ff;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+    --primary: #1d4ed8;
+    --primary-foreground: #ffffff;
+    --secondary: #dbeafe;
+    --secondary-foreground: #1e3a8a;
+    --muted: #e0e8f9;
+    --muted-foreground: #475569;
+    --faint: #eef2ff;
+    --accent: #dbeafe;
+    --accent-foreground: #1e40af;
+    --danger: #ef4444;
+    --danger-foreground: #ffffff;
+    --success: #16a34a;
+    --success-foreground: #ffffff;
+    --warning: #d97706;
+    --warning-foreground: #ffffff;
+    --border: #bfdbfe;
+    --input: #bfdbfe;
+    --ring: #1d4ed8;
+    --radius: 0.5rem;
+}
+
+[data-theme="dark"] {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --card: #1e293b;
+    --card-foreground: #f1f5f9;
+    --popover: #1e293b;
+    --popover-foreground: #f1f5f9;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #1e3a5f;
+    --secondary-foreground: #bfdbfe;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --faint: #172033;
+    --accent: #1e3a5f;
+    --accent-foreground: #bfdbfe;
+    --danger: #ef4444;
+    --danger-foreground: #ffffff;
+    --success: #22c55e;
+    --success-foreground: #ffffff;
+    --warning: #f59e0b;
+    --warning-foreground: #0f172a;
+    --border: #1e3a5f;
+    --input: #1e3a5f;
+    --ring: #3b82f6;
+    --radius: 0.5rem;
+}
+
+/* Top bar */
+#topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: var(--space-3) var(--space-5);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg);
+}
+
+#topbar strong {
+    font-size: 1.1rem;
+}
+
+/* 3-column board grid */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+    padding: var(--space-5);
+    align-items: start;
+    min-height: calc(100dvh - 60px);
+}
+
+/* Column */
+#board section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.col-header {
+    gap: var(--space-2);
+    align-items: center;
+    padding-bottom: var(--space-2);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.col-header h3 {
+    margin: 0;
+    flex: 1;
+}
+
+/* Card stack */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    min-height: 80px;
+}
+
+/* Drop zone highlight when dragging over column */
+.cards-container.drag-over {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+    outline: 2px dashed var(--color-border);
+    outline-offset: 4px;
+}
+
+/* Kanban card */
+.kanban-card {
+    cursor: grab;
+    user-select: none;
+    transition:
+        box-shadow 0.15s,
+        opacity 0.15s;
+}
+
+.kanban-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* While being dragged — card is position:fixed via JS */
+.kanban-card.is-dragging {
+    position: fixed;
+    opacity: 0.75;
+    cursor: grabbing;
+    box-shadow: var(--shadow-lg);
+    z-index: 500;
+    pointer-events: none; /* let pointermove fire on body instead */
+    margin: 0;
+}
+
+/* Ghost placeholder that keeps space while card flies */
+.drag-placeholder {
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg-alt);
+    flex-shrink: 0;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 720px) {
+    #board {
+        grid-template-columns: 1fr;
+    }
+}
