@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css"
+            integrity="sha512-gzw5zNP2TRq+DKyAqZfDclaTG4dOrGJrwob2Fc8xwcJPDPVij0HowLIMZ8c1NefFM0OZZYUUUNoPfcoI5jqudw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>kboard</title>
+      <script type="module" crossorigin src="/assets/index-DInmo-iv.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-C9VE2RI7.css">
+    </head>
+    <body>
+        <header id="topbar">
+            <nav class="hstack">
+                <span style="flex: 1"></span>
+                <menu class="buttons">
+                    <li>
+                        <button id="btn-import">
+                            <i
+                                class="ti ti-file-upload-filled"
+                                style="font-size: 22px"
+                            ></i>
+                            Importar
+                        </button>
+                    </li>
+                    <li>
+                        <button id="btn-export">
+                            <i
+                                class="ti ti-file-download-filled"
+                                style="font-size: 22px"
+                            ></i>
+                            Exportar
+                        </button>
+                    </li>
+                </menu>
+                <input type="file" id="file-import" accept=".json" hidden />
+            </nav>
+        </header>
+
+        <main id="board">
+            <section id="col-in-progress" data-column="in-progress">
+                <header class="hstack col-header">
+                    <span id="badge-in-progress" class="badge">0</span>
+                    <h3>Em Progresso</h3>
+                    <button class="btn-add" data-column="in-progress">+</button>
+                </header>
+                <div class="cards-container" id="cards-in-progress"></div>
+            </section>
+
+            <section id="col-reviewed" data-column="reviewed">
+                <header class="hstack col-header">
+                    <span
+                        id="badge-reviewed"
+                        class="badge"
+                        data-variant="warning"
+                        >0</span
+                    >
+                    <h3>Revisado</h3>
+                    <button class="btn-add" data-column="reviewed">+</button>
+                </header>
+                <div class="cards-container" id="cards-reviewed"></div>
+            </section>
+
+            <section id="col-completed" data-column="completed">
+                <header class="hstack col-header">
+                    <span
+                        id="badge-completed"
+                        class="badge"
+                        data-variant="success"
+                        >0</span
+                    >
+                    <h3>Concluído</h3>
+                    <button class="btn-add" data-column="completed">+</button>
+                </header>
+                <div class="cards-container" id="cards-completed"></div>
+            </section>
+        </main>
+
+        <dialog id="card-dialog" closedby="any">
+            <form method="dialog">
+                <header>
+                    <h3 id="dialog-title">Novo Card</h3>
+                </header>
+                <div class="vstack">
+                    <label data-field>
+                        Título
+                        <input
+                            type="text"
+                            id="input-title"
+                            placeholder="Título do card…"
+                        />
+                    </label>
+                    <label data-field>
+                        Descrição
+                        <textarea
+                            id="input-desc"
+                            rows="3"
+                            placeholder="Descrição (opcional)…"
+                        ></textarea>
+                    </label>
+                </div>
+                <footer class="hstack">
+                    <button
+                        type="button"
+                        id="btn-delete"
+                        data-variant="danger"
+                        style="display: none"
+                    >
+                        Excluir
+                    </button>
+                    <span style="flex: 1"></span>
+                    <button type="button" id="btn-cancel" class="outline">
+                        Cancelar
+                    </button>
+                    <button type="button" id="btn-save">Salvar</button>
+                </footer>
+            </form>
+        </dialog>
+
+        <dialog id="confirm-dialog" closedby="any">
+            <form method="dialog">
+                <header>
+                    <h3>Excluir card?</h3>
+                    <p>Essa ação não pode ser desfeita.</p>
+                </header>
+                <footer>
+                    <button
+                        type="button"
+                        id="btn-confirm-cancel"
+                        class="outline"
+                    >
+                        Cancelar
+                    </button>
+                    <button
+                        type="button"
+                        id="btn-confirm-ok"
+                        data-variant="danger"
+                    >
+                        Excluir
+                    </button>
+                </footer>
+            </form>
+        </dialog>
+
+    </body>
+</html>
