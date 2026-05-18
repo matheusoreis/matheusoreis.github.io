@@ -151,3 +151,7 @@
         grid-template-columns: 1fr;
     }
 }
+
+.kanban-card {
+    touch-action: none;
+}
