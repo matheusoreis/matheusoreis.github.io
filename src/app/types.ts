@@ -26,7 +26,23 @@ export interface NavbarData {
     side?: NavbarSide
 }
 
+export interface AboutDetail {
+    label: string
+    value: string
+    href?: string
+}
+
+export interface AboutData {
+    title: string
+    description: string
+    profileImage: string
+    subtitle: string
+    details: AboutDetail[]
+}
+
+
 export interface AppData {
     hero: HeroData
     navbar: NavbarData
+    about: AboutData
 }

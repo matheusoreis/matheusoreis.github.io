@@ -1,3 +1,4 @@
+import About from "./components/about"
 import Hero from "./components/hero"
 import Navbar from "./components/navbar"
 import type { AppData } from "./types"
@@ -11,6 +12,7 @@ export default function App({ data }: AppProps) {
         <>
             <Navbar {...data.navbar} />
             <Hero {...data.hero} />
+            <About {...data.about} />
         </>
     )
 }
