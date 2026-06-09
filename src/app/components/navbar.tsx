@@ -1,20 +1,8 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import type { NavbarData } from "../types"
 
-export interface NavItem {
-    label: string
-    href: string
-    icon: React.ReactNode
-}
-
-export type NavbarSide = "left" | "right"
-
-export interface NavbarProps {
-    items: NavItem[]
-    side?: NavbarSide
-}
-
-export default function Navbar({ items, side = "left" }: NavbarProps) {
+export default function Navbar({ items, side = "left" }: NavbarData) {
     const [active, setActive] = useState(items[0]?.href ?? "")
     const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -44,39 +32,42 @@ export default function Navbar({ items, side = "left" }: NavbarProps) {
                         flex flex-col gap-2 px-4 w-full
                         ${side === "right" ? "items-end" : "items-start"}
                     `}>
-                        {items.map(({ label, href, icon }) => (
-                            <li key={href} className="w-full lg:w-auto">
-                                <a
-                                    href={href}
-                                    onClick={() => {
-                                        setActive(href)
-                                        setMobileOpen(false)
-                                    }}
-                                    className={`
-                                        group flex items-center h-14 rounded-full px-4
-                                        overflow-hidden transition-all duration-300
-                                        w-full lg:w-14 lg:hover:w-44
-                                        ${side === "right" ? "flex-row-reverse" : ""}
-                                        ${active === href
-                                            ? "bg-primary text-white"
-                                            : "bg-[#f2f3f5] text-black hover:bg-primary hover:text-white"
-                                        }
-                                    `}
-                                >
-                                    <span className="flex h-6 w-6 items-center justify-center shrink-0">
-                                        {icon}
-                                    </span>
-                                    <span className={`
-                                        text-sm font-medium whitespace-nowrap
-                                        ${side === "right" ? "mr-2" : "ml-2"}
-                                        lg:hidden lg:group-hover:block
-                                        ${active === href ? "text-white" : "group-hover:text-white"}
-                                    `}>
-                                        {label}
-                                    </span>
-                                </a>
-                            </li>
-                        ))}
+                        {items.map(({ label, href, icon }) => {
+                            const isActive = active === href
+                            return (
+                                <li key={href} className="w-full lg:w-auto">
+                                    <a
+                                        href={href}
+                                        onClick={() => {
+                                            setActive(href)
+                                            setMobileOpen(false)
+                                        }}
+                                        className={`
+                                            group flex items-center h-14 rounded-full px-4
+                                            overflow-hidden transition-all duration-300
+                                            w-full lg:w-14 lg:hover:w-44
+                                            ${side === "right" ? "flex-row-reverse" : ""}
+                                            ${isActive
+                                                ? "bg-primary text-white"
+                                                : "bg-[#f2f3f5] text-black hover:bg-primary hover:text-white"
+                                            }
+                                        `}
+                                    >
+                                        <span className="flex h-6 w-6 items-center justify-center shrink-0">
+                                            {icon}
+                                        </span>
+                                        <span className={`
+                                            text-sm font-medium whitespace-nowrap
+                                            ${side === "right" ? "mr-2" : "ml-2"}
+                                            lg:hidden lg:group-hover:block
+                                            ${isActive ? "text-white" : "group-hover:text-white"}
+                                        `}>
+                                            {label}
+                                        </span>
+                                    </a>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </nav>
             </header>

@@ -1,20 +1,8 @@
-import { useEffect, useRef, type ReactNode } from "react"
+import { useEffect, useRef } from "react"
 import Typed from "typed.js"
+import type { HeroData } from "../types"
 
-interface SocialLink {
-    label: string
-    href: string
-    icon: ReactNode
-}
-
-interface HeroProps {
-    name: string
-    backgroundImage: string
-    typedStrings: string[]
-    socialLinks: SocialLink[]
-}
-
-export default function Hero({ name, backgroundImage, typedStrings, socialLinks }: HeroProps) {
+export default function Hero({ name, backgroundImage, typedStrings, socialLinks }: HeroData) {
     const typedRef = useRef<HTMLSpanElement>(null)
 
     useEffect(() => {
@@ -47,7 +35,7 @@ export default function Hero({ name, backgroundImage, typedStrings, socialLinks 
                         Sou <span ref={typedRef} className="text-primary-hover tracking-wide" />
                     </p>
 
-                    <div className="mt-8 flex flex-col gap-3 lg:flex-row lg:gap-5">
+                    <div className="mt-8 flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:gap-5">
                         {socialLinks.map(({ label, href, icon }) => (
                             <a
                                 key={label}
@@ -55,7 +43,7 @@ export default function Hero({ name, backgroundImage, typedStrings, socialLinks 
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label={label}
-                                className="group flex items-center gap-3 overflow-hidden rounded-full border border-transparent px-3.5 py-2.5 text-primary-hover transition-all duration-300 lg:gap-0 lg:hover:gap-2 lg:border-transparent lg:hover:border-primary-hover lg:hover:bg-primary-hover/10 max-lg:border-primary-hover max-lg:bg-primary-hover/10  w-fit"
+                                className="group flex w-fit items-center gap-3 overflow-hidden rounded-full border border-transparent px-3.5 py-2.5 text-primary-hover transition-all duration-300 max-lg:border-primary-hover max-lg:bg-primary-hover/10 lg:gap-0 lg:hover:gap-2 lg:hover:border-primary-hover lg:hover:bg-primary-hover/10"
                             >
                                 <span className="shrink-0 text-[22px] leading-none">{icon}</span>
                                 <span className="text-md font-medium whitespace-nowrap text-primary-hover lg:max-w-0 lg:overflow-hidden lg:opacity-0 lg:transition-all lg:duration-300 lg:group-hover:max-w-30 lg:group-hover:opacity-100">
