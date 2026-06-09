@@ -41,8 +41,25 @@ export interface AboutData {
 }
 
 
+export interface SkillTag {
+    label: string
+}
+
+export interface SkillCategory {
+    title: string
+    icon: ReactNode
+    skills: SkillTag[]
+}
+
+export interface SkillsData {
+    title?: string
+    subtitle?: string
+    categories: SkillCategory[]
+}
+
 export interface AppData {
     hero: HeroData
     navbar: NavbarData
     about: AboutData
+    skills: SkillsData
 }
