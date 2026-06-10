@@ -1,15 +1,86 @@
 @import "tailwindcss";
 
 @theme {
-    /* Cores do seu portfólio */
     --color-primary: #60cd7f;
     --color-primary-hover: #83f3a3;
     --color-secondary: #452280;
     --color-secondary-hover: #5d33a3;
     --color-dark: #3e4144;
 
-    /* Fontes */
+    --color-surface: #f2f3f5;
+    --color-surface-dark: #2a2a2a;
+
+    --color-hero-overlay: #33195f5f;
+
     --font-sans: "Raleway", sans-serif;
     --font-display: "Raleway", sans-serif;
     --font-accent: "Raleway", sans-serif;
+}
+
+/* Cores para o modo claro (padrão) */
+.text-gray-900 {
+    color: #1f2937;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.text-gray-700 {
+    color: #374151;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+.border-gray-100 {
+    border-color: #f3f4f6;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+/* Modo escuro */
+.dark {
+    --color-surface: #1e1e1e;
+    --color-surface-dark: #2a2a2a;
+}
+
+.dark body {
+    background-color: #111111;
+    color: #e5e5e5;
+}
+
+.dark .text-gray-900 {
+    color: #f0f0f0;
+}
+
+.dark .text-gray-600 {
+    color: #a0a0a0;
+}
+
+.dark .text-gray-500 {
+    color: #888888;
+}
+
+.dark .text-gray-700 {
+    color: #cccccc;
+}
+
+.dark .text-gray-400 {
+    color: #777777;
+}
+
+.dark .border-gray-100 {
+    border-color: #2a2a2a;
+}
+
+.dark .bg-white {
+    background-color: #1a1a1a;
 }

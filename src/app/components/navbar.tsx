@@ -1,15 +1,34 @@
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { useTheme } from "../theme"
 import type { NavbarData } from "../types"
+import { X } from "./icons/x"
+import { Hamburger } from "./icons/hamburger"
+import { Sun } from "./icons/sun"
+import { Moon } from "./icons/moon"
 
 export default function Navbar({ items, side = "left" }: NavbarData) {
     const [active, setActive] = useState(items[0]?.href ?? "")
     const [mobileOpen, setMobileOpen] = useState(false)
+    const { theme, toggle } = useTheme()
 
     const sideClass = side === "left" ? "left-0" : "right-0"
     const mobileHiddenClass = side === "left"
         ? (mobileOpen ? "translate-x-0" : "-translate-x-full")
         : (mobileOpen ? "translate-x-0" : "translate-x-full")
+
+    const itemClass = (isActive: boolean) => `
+        group flex items-center h-14 rounded-full px-4
+        overflow-hidden transition-all duration-300
+        w-full lg:w-14 lg:hover:w-44
+        ${side === "right" ? "flex-row-reverse" : ""}
+        ${isActive ? "bg-primary" : "bg-surface hover:bg-primary"}
+    `
+
+    const labelBase = `
+        text-sm font-medium whitespace-nowrap
+        ${side === "right" ? "mr-2" : "ml-2"}
+        lg:hidden lg:group-hover:block
+    `
 
     return (
         <>
@@ -18,7 +37,7 @@ export default function Navbar({ items, side = "left" }: NavbarData) {
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label="Menu"
             >
-                {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+                {mobileOpen ? <X size={26} /> : <Hamburger size={26} />}
             </button>
 
             <header className={`
@@ -27,7 +46,7 @@ export default function Navbar({ items, side = "left" }: NavbarData) {
                 ${mobileHiddenClass}
                 lg:w-auto lg:translate-x-0
             `}>
-                <nav className="h-full w-64 lg:w-auto flex items-center">
+                <nav className="h-full w-64 lg:w-auto flex flex-col items-center justify-center gap-2">
                     <ul className={`
                         flex flex-col gap-2 px-4 w-full
                         ${side === "right" ? "items-end" : "items-start"}
@@ -42,26 +61,12 @@ export default function Navbar({ items, side = "left" }: NavbarData) {
                                             setActive(href)
                                             setMobileOpen(false)
                                         }}
-                                        className={`
-                                            group flex items-center h-14 rounded-full px-4
-                                            overflow-hidden transition-all duration-300
-                                            w-full lg:w-14 lg:hover:w-44
-                                            ${side === "right" ? "flex-row-reverse" : ""}
-                                            ${isActive
-                                                ? "bg-primary text-white"
-                                                : "bg-[#f2f3f5] text-black hover:bg-primary hover:text-white"
-                                            }
-                                        `}
+                                        className={itemClass(isActive)}
                                     >
-                                        <span className="flex h-6 w-6 items-center justify-center shrink-0">
+                                        <span className={`flex h-6 w-6 items-center justify-center shrink-0 ${isActive ? "text-white" : "text-gray-900 dark:text-white"} group-hover:text-white`}>
                                             {icon}
                                         </span>
-                                        <span className={`
-                                            text-sm font-medium whitespace-nowrap
-                                            ${side === "right" ? "mr-2" : "ml-2"}
-                                            lg:hidden lg:group-hover:block
-                                            ${isActive ? "text-white" : "group-hover:text-white"}
-                                        `}>
+                                        <span className={`${labelBase} ${isActive ? "text-white" : "text-gray-900 dark:text-white"} group-hover:text-white`}>
                                             {label}
                                         </span>
                                     </a>
@@ -69,6 +74,21 @@ export default function Navbar({ items, side = "left" }: NavbarData) {
                             )
                         })}
                     </ul>
+
+                    <div className="px-4 w-full">
+                        <button
+                            onClick={() => { toggle(); setMobileOpen(false) }}
+                            aria-label="Alternar tema"
+                            className={itemClass(false)}
+                        >
+                            <span className={`flex h-6 w-6 items-center justify-center shrink-0 text-gray-900 dark:text-white group-hover:text-white`}>
+                                {theme === "dark" ? <Sun size={26} /> : <Moon size={26} />}
+                            </span>
+                            <span className={`${labelBase} text-gray-900 dark:text-white group-hover:text-white`}>
+                                {theme === "dark" ? "Modo claro" : "Modo escuro"}
+                            </span>
+                        </button>
+                    </div>
                 </nav>
             </header>
 

@@ -22,7 +22,7 @@ export default function Hero({ name, backgroundImage, typedStrings, socialLinks 
             className="relative w-full h-screen bg-cover bg-position-[top_right] lg:pl-40"
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
-            <div className="absolute inset-0" style={{ background: "#33195f5f" }} />
+            <div className="absolute inset-0 bg-hero-overlay" />
 
             <div className="relative z-10 flex items-center h-full">
                 <div className="px-8 text-left">

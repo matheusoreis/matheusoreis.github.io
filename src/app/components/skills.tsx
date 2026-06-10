@@ -12,10 +12,10 @@ export default function Skills({ title = "Habilidades", subtitle = "Tecnologias 
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {categories.map((category) => (
-                        <div key={category.title} className="border-l-4 border-secondary pl-5">
+                        <div key={category.title} className="border-l-4 border-primary pl-5">
 
                             <div className="flex items-center gap-2 mb-4">
-                                <span className="text-primary">{category.icon}</span>
+                                <span className="text-secondary">{category.icon}</span>
                                 <h3 className="text-lg font-bold text-gray-900">{category.title}</h3>
                             </div>
 
@@ -23,7 +23,7 @@ export default function Skills({ title = "Habilidades", subtitle = "Tecnologias 
                                 {category.skills.map((skill) => (
                                     <span
                                         key={skill.label}
-                                        className="px-3 py-1 text-sm font-medium text-gray-700 bg-[#f2f3f5] rounded-full border border-transparent hover:border-primary hover:text-primary transition-colors duration-200"
+                                        className="px-3 py-1 text-sm font-medium text-gray-700 bg-surface rounded-full border border-transparent hover:border-primary hover:text-primary transition-colors duration-200"
                                     >
                                         {skill.label}
                                     </span>
