@@ -1,6 +1,7 @@
-import { BriefcaseBusiness, GraduationCap } from "lucide-react"
 import { ChevronRight } from "./icons/chevron-right"
 import type { ResumeData } from "../types"
+import { Briefcase } from "./icons/briefcase"
+import { School } from "./icons/school"
 
 export default function Resume({ title = "Resumo", subtitle = "Minha trajetória profissional e acadêmica", experience, education }: ResumeData) {
     return (
@@ -16,7 +17,7 @@ export default function Resume({ title = "Resumo", subtitle = "Minha trajetória
 
                     <div className="border-l-4 border-primary pl-5">
                         <div className="flex items-center gap-2 mb-4">
-                            <span className="text-secondary"><BriefcaseBusiness size={20} /></span>
+                            <span className="text-secondary"><Briefcase size={20} /></span>
                             <h3 className="text-lg font-bold text-gray-900">Experiência Profissional</h3>
                         </div>
                         <div className="flex flex-col gap-6">
@@ -51,7 +52,7 @@ export default function Resume({ title = "Resumo", subtitle = "Minha trajetória
 
                     <div className="border-l-4 border-primary pl-5">
                         <div className="flex items-center gap-2 mb-4">
-                            <span className="text-secondary"><GraduationCap size={20} /></span>
+                            <span className="text-secondary"><School size={20} /></span>
                             <h3 className="text-lg font-bold text-gray-900">Cursos & Formações</h3>
                         </div>
                         <div className="flex flex-col gap-6">
