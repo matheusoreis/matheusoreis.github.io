@@ -1,6 +1,7 @@
 import About from "./components/about"
 import Hero from "./components/hero"
 import Navbar from "./components/navbar"
+import Resume from "./components/resume"
 import Skills from "./components/skills"
 import { ThemeProvider } from "./theme"
 import type { AppData } from "./types"
@@ -16,6 +17,7 @@ export default function App({ data }: AppProps) {
             <Hero {...data.hero} />
             <About {...data.about} />
             <Skills {...data.skills} />
+            <Resume {...data.resume} />
         </ThemeProvider>
     )
 }

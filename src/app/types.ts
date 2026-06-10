@@ -57,9 +57,33 @@ export interface SkillsData {
     categories: SkillCategory[]
 }
 
+
+export interface ExperienceData {
+    company: string
+    role: string
+    period: string
+    location: string
+    description: string[]
+}
+
+export interface EducationData {
+    course: string
+    institution: string
+    year: string
+    instructor?: string
+}
+
+export interface ResumeData {
+    title: string
+    subtitle?: string
+    experience: ExperienceData[]
+    education: EducationData[]
+}
+
 export interface AppData {
     hero: HeroData
     navbar: NavbarData
     about: AboutData
     skills: SkillsData
+    resume: ResumeData
 }

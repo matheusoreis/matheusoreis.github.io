@@ -176,6 +176,81 @@ const data: AppData = {
     ],
   },
 
+  resume: {
+    title: "Resumo",
+    experience: [
+      {
+        company: "MegaGym Academias",
+        role: "Programador Mobile Flutter & Full-Stack",
+        period: "Jan 2026 – Mai 2026",
+        location: "Aracaju - SE",
+        description: [
+          "Desenvolveu uma plataforma completa para academia utilizando Flutter no aplicativo mobile e no dashboard administrativo, e Go com PocketBase no backend. A aplicação contempla feed social, gestão de treinos e acompanhamento nutricional, com modelagem relacional completa do banco de dados garantindo integridade referencial e performance em consultas complexas, o que resultou em um aumento de 25% na retenção de alunos e adoção ativa por mais de 80% dos frequentadores.",
+        ],
+      },
+      {
+        company: "Goodbom Supermercados",
+        role: "Programador Mobile Flutter & Full-Stack",
+        period: "Abr 2024 – Set 2025",
+        location: "Sumaré, São Paulo - SP",
+        description: [
+          "Desenvolveu um ecossistema completo de aplicações com Next.js e AstroJS no frontend e NestJS no backend, aplicando Clean Architecture para garantir baixo acoplamento e alta manutenibilidade. Realizou integrações com PostgreSQL e OracleDB com foco em consistência transacional e alta disponibilidade, alcançando uma redução de 40% no tempo de processamento de pedidos e suporte a mais de 2.000 transações diárias sem indisponibilidade.",
+        ],
+      },
+      {
+        company: "Flutterando",
+        role: "Designer UX/UI",
+        period: "Abr 2025 – Mai 2025",
+        location: "Remoto",
+        description: [
+          "Desenvolveu a identidade visual oficial da Flutterando, a maior comunidade Flutter do Brasil, definindo diretrizes completas de marca: tipografia, paleta, hierarquia visual e sistema de componentes. Resultado: Diretrizes adotadas em 5+ eventos oficiais e materiais que alcançaram mais de 10.000 desenvolvedores.",
+        ],
+      },
+      {
+        company: "Desktopi",
+        role: "Desenvolvedor Mobile Flutter",
+        period: "Jan 2023 – Mar 2024",
+        location: "São Mateus do Sul, Paraná - PR",
+        description: [
+          "Desenvolveu aplicação multiplataforma com suporte offline first, consumindo APIs REST e integrando sistemas legados em Delphi, com implementação de geolocalização em tempo real e manutenção de servidores Linux, resultando em uma redução de 30% no tempo de resposta após otimizações.",
+        ],
+      },
+      {
+        company: "Tecno Portas",
+        role: "Programador Mobile Flutter & Designer",
+        period: "Mar 2021 – Dez 2022",
+        location: "Arujá, São Paulo - SP",
+        description: [
+          "Desenvolveu aplicativos mobile com Flutter e landing pages institucionais com React/TypeScript, foco em performance e SEO. Criou identidades visuais e automações para campanhas de marketing digital e endomarketing.",
+        ],
+      },
+      {
+        company: "2eBrain Studios",
+        role: "Programador Mobile Flutter",
+        period: "Fev 2020 - Nov 2020",
+        location: "São Miguel Paulista, São Paulo - SP",
+        description: [
+          "Desenvolveu aplicativo mobile com Flutter no modelo de transporte sob demanda, similar ao Uber, com funcionalidades de geolocalização em tempo real, matching entre motoristas e passageiros e rastreamento de rotas.",
+        ],
+      },
+    ],
+    education: [
+      { course: "Lua", institution: "Udemy", year: "2025", instructor: "TTech Inc" },
+      { course: "Lua", institution: "Particular", year: "2025", instructor: "Paulo Carabalone" },
+      { course: "Ruby", institution: "Udemy", year: "2024", instructor: "Jackson Pires" },
+      { course: "Aplicativos em Flutter", institution: "Flutterando — Masterclass 5", year: "2023", instructor: "Jacob Moura" },
+      { course: "Aplicativos em Flutter", institution: "Flutterando — Masterclass 4", year: "2022", instructor: "Jacob Moura" },
+      { course: "Aplicativos em Flutter", institution: "Flutterando — Masterclass 3", year: "2021", instructor: "Jacob Moura" },
+      { course: "Aplicativos em Flutter", institution: "Flutterando — Masterclass 2", year: "2020", instructor: "Jacob Moura" },
+      { course: "Desenvolvimento em Flutter", institution: "Cod3r", year: "2021", instructor: "Leonardo Moura Leitão" },
+      { course: "NestJS", institution: "Hcode Treinamentos", year: "2021", instructor: "João Rangel" },
+      { course: "UX Design", institution: "Alura", year: "2021" },
+      { course: "UI Design", institution: "Alura", year: "2021" },
+      { course: "JavaScript / Typescript", institution: "Cod3r", year: "2020", instructor: "Leonardo Moura Leitão" },
+      { course: "HTML e CSS", institution: "Alura", year: "2020" },
+      { course: "Design Gráfico", institution: "Alura", year: "2020" },
+    ],
+  },
 }
 
 createRoot(document.getElementById("root")!).render(
