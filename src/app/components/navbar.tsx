@@ -5,8 +5,9 @@ import { X } from "./icons/x"
 import { Hamburger } from "./icons/hamburger"
 import { Sun } from "./icons/sun"
 import { Moon } from "./icons/moon"
+import { FilePDF } from "./icons/file-pdf"
 
-export default function Navbar({ items, side = "left" }: NavbarData) {
+export default function Navbar({ items, side = "left", onExportPdf }: NavbarData & { onExportPdf?: () => void }) {
     const [active, setActive] = useState(items[0]?.href ?? "")
     const [mobileOpen, setMobileOpen] = useState(false)
     const { theme, toggle } = useTheme()
@@ -18,7 +19,7 @@ export default function Navbar({ items, side = "left" }: NavbarData) {
 
     const itemClass = (isActive: boolean) => `
         group flex items-center h-14 rounded-full px-4
-        overflow-hidden transition-all duration-300
+        overflow-hidden transition-all duration-300 cursor-pointer
         w-full lg:w-14 lg:hover:w-44
         ${side === "right" ? "flex-row-reverse" : ""}
         ${isActive ? "bg-primary" : "bg-surface hover:bg-primary"}
@@ -75,13 +76,26 @@ export default function Navbar({ items, side = "left" }: NavbarData) {
                         })}
                     </ul>
 
-                    <div className="px-4 w-full">
+                    <div className="flex flex-col gap-2 px-4 w-full">
+                        <button
+                            onClick={() => { onExportPdf?.(); setMobileOpen(false) }}
+                            aria-label="Baixar currículo"
+                            className={itemClass(false)}
+                        >
+                            <span className="flex h-6 w-6 items-center justify-center shrink-0 text-gray-900 dark:text-white group-hover:text-white">
+                                <FilePDF size={22} />
+                            </span>
+                            <span className={`${labelBase} text-gray-900 dark:text-white group-hover:text-white`}>
+                                Baixar Currículo
+                            </span>
+                        </button>
+
                         <button
                             onClick={() => { toggle(); setMobileOpen(false) }}
                             aria-label="Alternar tema"
                             className={itemClass(false)}
                         >
-                            <span className={`flex h-6 w-6 items-center justify-center shrink-0 text-gray-900 dark:text-white group-hover:text-white`}>
+                            <span className="flex h-6 w-6 items-center justify-center shrink-0 text-gray-900 dark:text-white group-hover:text-white">
                                 {theme === "dark" ? <Sun size={26} /> : <Moon size={26} />}
                             </span>
                             <span className={`${labelBase} text-gray-900 dark:text-white group-hover:text-white`}>

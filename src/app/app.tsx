@@ -5,6 +5,7 @@ import Resume from "./components/resume"
 import Skills from "./components/skills"
 import { ThemeProvider } from "./theme"
 import type { AppData } from "./types"
+import { exportPDF } from "./utils/export-pdf"
 
 interface AppProps {
     data: AppData
@@ -13,7 +14,7 @@ interface AppProps {
 export default function App({ data }: AppProps) {
     return (
         <ThemeProvider>
-            <Navbar {...data.navbar} />
+            <Navbar {...data.navbar} onExportPdf={() => exportPDF(data)} />
             <Hero {...data.hero} />
             <About {...data.about} />
             <Skills {...data.skills} />
