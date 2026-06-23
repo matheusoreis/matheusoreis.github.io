@@ -143,15 +143,44 @@ export function exportPDF(data: AppData) {
 
     if (resume.courses && resume.courses.length > 0) {
         sectionTitle(doc, cursor, "Cursos Complementares")
-        resume.courses.forEach((e, i) => {
-            infoRow(doc, cursor, e.course, e.year)
-            doc.setFontSize(9.5).setFont("helvetica", "italic").setTextColor(...COLOR.light)
-            const instLines = lines(doc, e.institution, CONTENT_W)
-            cursor.ensure(instLines.length * 4.8)
-            doc.text(instLines, MARGIN, cursor.y)
-            cursor.advance(instLines.length * 4.8)
-            if (i < resume.courses.length - 1) cursor.advance(3)
-        })
+
+        const COLS = 3
+        const GAP = 6
+        const COL_W = (CONTENT_W - GAP * (COLS - 1)) / COLS
+        const colX = (col: number) => MARGIN + col * (COL_W + GAP)
+
+        for (let i = 0; i < resume.courses.length; i += COLS) {
+            const group = resume.courses.slice(i, i + COLS)
+
+            const heights = group.map(e => {
+                const yearW = e.year ? doc.getStringUnitWidth(e.year) * 9 * 0.352 + 5 : 0
+                const courseLines = lines(doc, e.course, COL_W - yearW)
+                const instLines = lines(doc, e.institution, COL_W)
+                return courseLines.length * 5.5 + instLines.length * 4.8 + 3
+            })
+            const groupH = Math.max(...heights)
+            cursor.ensure(groupH)
+
+            const startY = cursor.y
+            group.forEach((e, col) => {
+                const x = colX(col)
+                const yearW = e.year ? doc.getStringUnitWidth(e.year) * 9 * 0.352 + 5 : 0
+                const courseLines = lines(doc, e.course, COL_W - yearW)
+
+                if (e.year) {
+                    doc.setFontSize(9).setFont("helvetica", "normal").setTextColor(...COLOR.light)
+                    doc.text(e.year, x + COL_W, startY, { align: "right" })
+                }
+                doc.setFontSize(10).setFont("helvetica", "bold").setTextColor(...COLOR.secondary)
+                doc.text(courseLines, x, startY)
+
+                const instY = startY + courseLines.length * 5.5
+                doc.setFontSize(9.5).setFont("helvetica", "italic").setTextColor(...COLOR.light)
+                doc.text(lines(doc, e.institution, COL_W), x, instY)
+            })
+
+            cursor.advance(groupH + 3)
+        }
     }
 
     sectionTitle(doc, cursor, "Competências Técnicas")
