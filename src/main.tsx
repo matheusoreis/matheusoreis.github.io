@@ -1,28 +1,27 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-
 import App from "./app/app"
-import type { AppData } from "./app/types"
-
+import heroBg from "./app/assets/hero.jpg"
+import profileImg from "./app/assets/profile.jpg"
 import { BrandGithub } from "./app/components/icons/brand-github"
 import { BrandLinkedin } from "./app/components/icons/brand-linkedin"
 import { BrandWhatsApp } from "./app/components/icons/brand-whatsapp"
+import { Cloud } from "./app/components/icons/cloud"
+import { Code } from "./app/components/icons/code"
+import { Database } from "./app/components/icons/database"
 import { File } from "./app/components/icons/file"
 import { Home } from "./app/components/icons/home"
+import { Layout } from "./app/components/icons/layout"
+import { ManualGearbox } from "./app/components/icons/manual-gearbox"
+import { Server } from "./app/components/icons/server"
+import { Smartphone } from "./app/components/icons/smartphone"
+import { Sparkles } from "./app/components/icons/sparkles"
 import { User } from "./app/components/icons/user"
-
-import heroBg from "./app/assets/hero.jpg"
-import profileImg from "./app/assets/profile.jpg"
+import type { AppData } from "./app/types"
+import AOS from 'aos'
 
 import "./index.css"
-import { ManualGearbox } from "./app/components/icons/manual-gearbox"
-import { Database } from "./app/components/icons/database"
-import { Smartphone } from "./app/components/icons/smartphone"
-import { Server } from "./app/components/icons/server"
-import { Layout } from "./app/components/icons/layout"
-import { Code } from "./app/components/icons/code"
-import { Cloud } from "./app/components/icons/cloud"
-import { Sparkles } from "./app/components/icons/sparkles"
+import "aos/dist/aos.css"
 
 const data: AppData = {
   hero: {
@@ -309,6 +308,13 @@ const data: AppData = {
     ]
   },
 }
+
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: false,
+  mirror: false,
+})
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

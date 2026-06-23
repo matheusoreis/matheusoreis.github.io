@@ -27,15 +27,15 @@ export default function Hero({ name, backgroundImage, typedStrings, socialLinks 
             <div className="relative z-10 flex items-center h-full">
                 <div className="px-8 text-left">
 
-                    <h1 className="font-display text-[64px] font-bold leading-14 text-white max-lg:text-[32px] max-lg:leading-9">
+                    <h1 data-aos="fade-up" className="font-display text-[64px] font-bold leading-14 text-white max-lg:text-[32px] max-lg:leading-9">
                         <span>{name}</span>
                     </h1>
 
-                    <p className="font-accent mt-4 text-[26px] text-white max-lg:mt-2.5 max-lg:text-xl max-lg:leading-6">
+                    <p data-aos="fade-up" className="font-accent mt-4 text-[26px] text-white max-lg:mt-2.5 max-lg:text-xl max-lg:leading-6">
                         Sou <span ref={typedRef} className="text-primary-hover tracking-wide" />
                     </p>
 
-                    <div className="mt-8 flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:gap-5">
+                    <div data-aos="fade-up" className="mt-8 flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:gap-5">
                         {socialLinks.map(({ label, href, icon }) => (
                             <a
                                 key={label}

@@ -5,7 +5,7 @@ import { School } from "./icons/school"
 
 export default function Resume({ title = "Resumo", subtitle = "Minha trajetória profissional e acadêmica", experience, formations, courses }: ResumeData) {
     return (
-        <section id="resume" className="py-16 px-6 lg:px-40">
+        <section data-aos="fade-up" id="resume" className="py-16 px-6 lg:px-40">
             <div className="max-w-6xl mx-auto">
 
                 <div className="mb-10">

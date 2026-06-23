@@ -2,7 +2,7 @@ import type { SkillsData } from "../types"
 
 export default function Skills({ title = "Habilidades", subtitle = "Tecnologias que uso no dia a dia", categories }: SkillsData) {
     return (
-        <section id="skills" className="py-16 px-6 lg:px-40">
+        <section data-aos="fade-up" id="skills" className="py-16 px-6 lg:px-40">
             <div className="max-w-6xl mx-auto">
 
                 <div className="mb-10">

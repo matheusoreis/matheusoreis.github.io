@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+}
+
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
 @theme {
     --color-primary: #60cd7f;
     --color-primary-hover: #83f3a3;

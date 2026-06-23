@@ -3,7 +3,7 @@ import { ChevronRight } from "./icons/chevron-right"
 
 export default function About({ title, description, profileImage, subtitle, details }: AboutData) {
     return (
-        <section id="about" className="py-16 px-6 lg:px-40">
+        <section id="about" className="py-16 px-6 lg:px-40" data-aos="fade-up">
             <div className="max-w-6xl mx-auto">
 
                 <div className="mb-10">
