@@ -3,7 +3,7 @@ import type { ResumeData } from "../types"
 import { Briefcase } from "./icons/briefcase"
 import { School } from "./icons/school"
 
-export default function Resume({ title = "Resumo", subtitle = "Minha trajetória profissional e acadêmica", experience, education }: ResumeData) {
+export default function Resume({ title = "Resumo", subtitle = "Minha trajetória profissional e acadêmica", experience, formations, courses }: ResumeData) {
     return (
         <section id="resume" className="py-16 px-6 lg:px-40">
             <div className="max-w-6xl mx-auto">
@@ -53,10 +53,10 @@ export default function Resume({ title = "Resumo", subtitle = "Minha trajetória
                     <div className="border-l-4 border-primary pl-5">
                         <div className="flex items-center gap-2 mb-4">
                             <span className="text-secondary"><School size={20} /></span>
-                            <h3 className="text-lg font-bold text-gray-900">Cursos & Formações</h3>
+                            <h3 className="text-lg font-bold text-gray-900">Formação Acadêmica</h3>
                         </div>
-                        <div className="flex flex-col gap-6">
-                            {education.map((item) => (
+                        <div className="flex flex-col gap-4 mb-6">
+                            {formations.map((item) => (
                                 <div key={item.course + item.year + item.institution}>
                                     <div className="flex items-start justify-between gap-2 flex-wrap mb-1">
                                         <span className="px-3 py-1 text-md font-medium text-gray-700 bg-surface rounded-full border border-transparent">
@@ -67,9 +67,26 @@ export default function Resume({ title = "Resumo", subtitle = "Minha trajetória
                                         </span>
                                     </div>
                                     <p className="text-sm font-medium text-gray-700">{item.institution}</p>
-                                    {item.instructor && (
-                                        <p className="text-xs text-gray-500 mt-0.5">Instrutor: {item.instructor}</p>
-                                    )}
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="flex items-center gap-2 mb-4 mt-6">
+                            <span className="text-secondary"><School size={20} /></span>
+                            <h3 className="text-lg font-bold text-gray-900">Cursos Complementares</h3>
+                        </div>
+                        <div className="flex flex-col gap-4">
+                            {courses.map((item) => (
+                                <div key={item.course + item.year + item.institution}>
+                                    <div className="flex items-start justify-between gap-2 flex-wrap mb-1">
+                                        <span className="px-3 py-1 text-md font-medium text-gray-700 bg-surface rounded-full border border-transparent">
+                                            {item.course}
+                                        </span>
+                                        <span className="px-3 py-1 text-md font-medium text-gray-700 bg-surface rounded-full border border-transparent">
+                                            {item.year}
+                                        </span>
+                                    </div>
+                                    <p className="text-sm font-medium text-gray-700">{item.institution}</p>
                                 </div>
                             ))}
                         </div>

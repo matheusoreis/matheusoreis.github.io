@@ -99,19 +99,16 @@ export function exportPDF(data: AppData) {
     resume.experience.forEach((e, i) => {
         cursor.ensure(14)
 
-        // Cargo em bold
         doc.setFontSize(10).setFont("helvetica", "bold").setTextColor(...COLOR.secondary)
         const roleLines = lines(doc, e.role, CONTENT_W)
         doc.text(roleLines, MARGIN, cursor.y)
 
-        // Período alinhado à direita na mesma linha do cargo
         if (e.period) {
             doc.setFontSize(9).setFont("helvetica", "normal").setTextColor(...COLOR.light)
             doc.text(e.period, MARGIN + CONTENT_W, cursor.y, { align: "right" })
         }
         cursor.advance(roleLines.length * 5.5)
 
-        // Empresa · Localização em itálico
         const org = [e.company, e.location].filter(Boolean).join(" · ")
         doc.setFontSize(9.5).setFont("helvetica", "italic").setTextColor(...COLOR.light)
         const orgLines = lines(doc, org, CONTENT_W)
@@ -133,17 +130,29 @@ export function exportPDF(data: AppData) {
         if (i < resume.experience.length - 1) cursor.advance(4)
     })
 
-    sectionTitle(doc, cursor, "Cursos & Formações")
-    resume.education.forEach((e, i) => {
+    sectionTitle(doc, cursor, "Formação Acadêmica")
+    resume.formations.forEach((e, i) => {
         infoRow(doc, cursor, e.course, e.year)
-        const inst = [e.institution, e.instructor ? `Instrutor: ${e.instructor}` : ""].filter(Boolean).join(" · ")
         doc.setFontSize(9.5).setFont("helvetica", "italic").setTextColor(...COLOR.light)
-        const instLines = lines(doc, inst, CONTENT_W)
+        const instLines = lines(doc, e.institution, CONTENT_W)
         cursor.ensure(instLines.length * 4.8)
         doc.text(instLines, MARGIN, cursor.y)
         cursor.advance(instLines.length * 4.8)
-        if (i < resume.education.length - 1) cursor.advance(3)
+        if (i < resume.formations.length - 1) cursor.advance(3)
     })
+
+    if (resume.courses && resume.courses.length > 0) {
+        sectionTitle(doc, cursor, "Cursos Complementares")
+        resume.courses.forEach((e, i) => {
+            infoRow(doc, cursor, e.course, e.year)
+            doc.setFontSize(9.5).setFont("helvetica", "italic").setTextColor(...COLOR.light)
+            const instLines = lines(doc, e.institution, CONTENT_W)
+            cursor.ensure(instLines.length * 4.8)
+            doc.text(instLines, MARGIN, cursor.y)
+            cursor.advance(instLines.length * 4.8)
+            if (i < resume.courses.length - 1) cursor.advance(3)
+        })
+    }
 
     sectionTitle(doc, cursor, "Competências Técnicas")
     skills.categories.forEach((cat, i) => {

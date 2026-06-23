@@ -33,6 +33,7 @@ const data: AppData = {
       "Desenvolvedor Dart",
       "Desenvolvedor C#",
       "Desenvolvedor Java",
+      "Desenvolvedor GO",
       "Designer UX/UI",
     ],
     socialLinks: [
@@ -52,7 +53,7 @@ const data: AppData = {
   },
   about: {
     title: "Sobre",
-    description: "Desenvolvedor Full Stack & Mobile com sólida experiência em Front-End, Back-End e desenvolvimento Mobile, atuando em aplicações de grande escala com alto volume transacional. No Front-End, domina JavaScript e TypeScript com frameworks como React, Vue e Angular, aplicando expertise em design systems, arquitetura de componentes reutilizáveis e sólidos conhecimentos em UX/UI para entregar interfaces intuitivas e consistentes. No Back-End, utiliza Go, Java, C# e TypeScript na construção de serviços robustos, escaláveis e bem estruturados. No Mobile, entrega aplicações performáticas para Android e iOS com Dart e Flutter, com entendimento aprofundado das particularidades de cada plataforma.",
+    description: "Desenvolvedor full-cycle com experiência em aplicações de grande escala e alto volume transacional. Atuo em todas as camadas, back-end (Go, Java, C#, JS/TS), front-end (React, Vue, Angular, Solid, Svelte, VanillaJS, HTML & CSS) e mobile (Flutter, React Native), sempre com foco em performance, manutenibilidade e entrega de valor. Tenho conhecimento em Inteligência Artificial, incluindo integração com APIs de LLMs (OpenAI, Google Gemini, Anthropic), agentes autônomos, RAG (Retrieval-Augmented Generation) e automação inteligente com n8n, aplicando essas tecnologias para otimizar processos e criar experiências mais inteligentes. Minha visão holística do produto, combinada com expertise em UX/UI e design systems, garante que cada solução seja tecnicamente robusta e intuitiva para o usuário, gerando impacto real para o negócio.",
     profileImage: profileImg,
     subtitle: "Desenvolvedor Fullstack, Mobile & Designer UX/UI.",
     details: [
@@ -66,7 +67,7 @@ const data: AppData = {
   },
   skills: {
     title: "Habilidades",
-    subtitle: "Tecnologias que uso no dia a dia",
+    subtitle: "Tecnologias que uso no meu dia a dia",
     categories: [
       {
         title: "Linguagens",
@@ -74,14 +75,15 @@ const data: AppData = {
         skills: [
           { label: "TypeScript" },
           { label: "JavaScript" },
-          { label: "Dart" },
-          { label: "C#" },
-          { label: "Java" },
           { label: "Go" },
+          { label: "Java" },
+          { label: "C#" },
+          { label: "Dart" },
+          { label: "Lua" },
         ],
       },
       {
-        title: "Front-end",
+        title: "Frameworks Front-end",
         icon: <Layout size={26} />,
         skills: [
           { label: "ReactJS" },
@@ -90,24 +92,33 @@ const data: AppData = {
           { label: "Svelte" },
           { label: "Vue" },
           { label: "Angular" },
-          { label: "Next.js" },
+          { label: "NextJS" },
+          { label: "AstroJS" },
+          { label: "VanillaJS" },
+          { label: "HTML/CSS" },
         ],
       },
       {
-        title: "Back-end",
+        title: "Frameworks Back-end",
         icon: <Server size={26} />,
         skills: [
-          { label: "Node.js" },
-          { label: "Bun.js" },
-          { label: "Deno.js" },
-          { label: "Fiber" },
-          { label: "Gorilla" },
-          { label: "Spring Boot" },
-          { label: ".NET" },
-          { label: "Darto" },
-          { label: "Vaden" },
+          { label: "NodeJS" },
+          { label: "BunJS" },
+          { label: "DenoJS" },
+
           { label: "NestJS" },
           { label: "ElysiaJS" },
+          { label: "ExpressJS" },
+
+          { label: "Fiber" },
+          { label: "Gorilla" },
+
+          { label: "Spring Boot" },
+
+          { label: ".NET" },
+
+          { label: "Darto" },
+          { label: "Vaden" },
         ],
       },
       {
@@ -115,11 +126,10 @@ const data: AppData = {
         icon: <Smartphone size={26} />,
         skills: [
           { label: "Android" },
-          { label: "Jetpack Compose" },
+          { label: "iOS" },
           { label: "Flutter" },
           { label: "React Native" },
           { label: "Expo" },
-          { label: "App Publishing" },
         ],
       },
       {
@@ -130,6 +140,8 @@ const data: AppData = {
           { label: "SQLite" },
           { label: "MySQL" },
           { label: "Redis" },
+          { label: "OracleDB" },
+          { label: "SQLServer" },
         ],
       },
       {
@@ -154,7 +166,6 @@ const data: AppData = {
           { label: "Appwrite" },
           { label: "n8n" },
           { label: "Figma" },
-          { label: "Pacote Adobe" },
         ],
       },
       {
@@ -165,12 +176,8 @@ const data: AppData = {
           { label: "Anthropic Claude" },
           { label: "Google Gemini" },
           { label: "Ollama" },
-          { label: "LangChain" },
-          { label: "LangGraph" },
-          { label: "RAG" },
           { label: "AI Agents" },
           { label: "Prompt Engineering" },
-          { label: "Embeddings" },
         ],
       }
     ],
@@ -180,76 +187,126 @@ const data: AppData = {
     title: "Resumo",
     experience: [
       {
-        company: "MegaGym Academias",
-        role: "Programador Mobile Flutter & Full-Stack",
-        period: "Jan 2026 – Mai 2026",
-        location: "Aracaju - SE",
-        description: [
-          "Desenvolveu uma plataforma completa para academia utilizando Flutter no aplicativo mobile e no dashboard administrativo, e Go com PocketBase no backend. A aplicação contempla feed social, gestão de treinos e acompanhamento nutricional, com modelagem relacional completa do banco de dados garantindo integridade referencial e performance em consultas complexas, o que resultou em um aumento de 25% na retenção de alunos e adoção ativa por mais de 80% dos frequentadores.",
-        ],
+        "company": "MegaGym Academias",
+        "role": "Desenvolvedor Mobile Flutter & Full-Stack",
+        "period": "Jan 2026 – Mai 2026",
+        "location": "Aracaju - SE",
+        "description": [
+          "App mobile e dashboard administrativo com Flutter.",
+          "Backend com Go + PocketBase.",
+          "Feed social, gestão de treinos e acompanhamento nutricional integrados.",
+          "Modelagem relacional do banco de dados focada em integridade referencial e performance.",
+          "+25% na retenção de alunos e adoção ativa por mais de 80% dos frequentadores."
+        ]
       },
       {
-        company: "Goodbom Supermercados",
-        role: "Programador Mobile Flutter & Full-Stack",
-        period: "Abr 2024 – Set 2025",
-        location: "Sumaré, São Paulo - SP",
-        description: [
-          "Desenvolveu um ecossistema completo de aplicações com Next.js e AstroJS no frontend e NestJS no backend, aplicando Clean Architecture para garantir baixo acoplamento e alta manutenibilidade. Realizou integrações com PostgreSQL e OracleDB com foco em consistência transacional e alta disponibilidade, alcançando uma redução de 40% no tempo de processamento de pedidos e suporte a mais de 2.000 transações diárias sem indisponibilidade.",
-        ],
+        "company": "DSU Soluções",
+        "role": "Desenvolvedor Mobile Flutter e React Native & Back-end",
+        "period": "Jul 2025 – Dez 2025",
+        "location": "São Paulo - SP",
+        "description": [
+          "Front-end com Angular e React.",
+          "Backend-end com C# e .NET.",
+          "Banco de dados SQL Server com modelagem otimizada para consultas complexas.",
+          "Desenvolvimento de aplicativos com React Native e flutter para produtores de música com dashboard em tempo real.",
+          "Monitoramento de métricas e performance ao vivo para tomada de decisão rápida."
+        ]
       },
       {
-        company: "Flutterando",
-        role: "Designer UX/UI",
-        period: "Abr 2025 – Mai 2025",
-        location: "Remoto",
-        description: [
-          "Desenvolveu a identidade visual oficial da Flutterando, a maior comunidade Flutter do Brasil, definindo diretrizes completas de marca: tipografia, paleta, hierarquia visual e sistema de componentes. Resultado: Diretrizes adotadas em 5+ eventos oficiais e materiais que alcançaram mais de 10.000 desenvolvedores.",
-        ],
+        "company": "Goodbom Supermercados",
+        "role": "Desenvolvedor Mobile Flutter & Full-Stack",
+        "period": "Abr 2024 – Set 2025",
+        "location": "Sumaré, São Paulo - SP",
+        "description": [
+          "Ecossistema completo com NextJS, AstroJS (ReactJS & VanillaJS).",
+          "Backend com NestJS e SpringBoot.",
+          "Clean Architecture e MVVM para baixo acoplamento e alta manutenibilidade.",
+          "Integrações com PostgreSQL e OracleDB, priorizando consistência transacional.",
+          "40% menos tempo no processamento de pedidos e 2.000+ transações/dia sem queda."
+        ]
       },
       {
-        company: "Desktopi",
-        role: "Desenvolvedor Mobile Flutter",
-        period: "Jan 2023 – Mar 2024",
-        location: "São Mateus do Sul, Paraná - PR",
-        description: [
-          "Desenvolveu aplicação multiplataforma com suporte offline first, consumindo APIs REST e integrando sistemas legados em Delphi, com implementação de geolocalização em tempo real e manutenção de servidores Linux, resultando em uma redução de 30% no tempo de resposta após otimizações.",
-        ],
+        "company": "Flutterando",
+        "role": "Designer UX/UI",
+        "period": "Abr 2025 – Mai 2025",
+        "location": "Remoto",
+        "description": [
+          "Criação da identidade visual oficial da maior comunidade Flutter do Brasil.",
+          "Definição de tipografia, paleta, hierarquia visual e sistema de componentes.",
+          "Pesquisas completas de UX/UI",
+          "Diretrizes adotadas em 5+ eventos oficiais.",
+          "Materiais alcançaram mais de 10.000 desenvolvedores."
+        ]
       },
       {
-        company: "Tecno Portas",
-        role: "Programador Mobile Flutter & Designer",
-        period: "Mar 2021 – Dez 2022",
-        location: "Arujá, São Paulo - SP",
-        description: [
-          "Desenvolveu aplicativos mobile com Flutter e landing pages institucionais com React/TypeScript, foco em performance e SEO. Criou identidades visuais e automações para campanhas de marketing digital e endomarketing.",
-        ],
+        "company": "Desktopi",
+        "role": "Desenvolvedor Mobile Flutter",
+        "period": "Jan 2023 – Mar 2024",
+        "location": "São Mateus do Sul, Paraná - PR",
+        "description": [
+          "App multiplataforma em Flutter com offline first.",
+          "Consumo de APIs REST e integração com sistemas legados em Delphi.",
+          "Geolocalização, Criação de rotas até o endereço e acompanhamento do dispositivo conectado em tempo real.",
+          "Manutenção de servidores Linux.",
+        ]
       },
       {
-        company: "2eBrain Studios",
-        role: "Programador Mobile Flutter",
-        period: "Fev 2020 - Nov 2020",
-        location: "São Miguel Paulista, São Paulo - SP",
-        description: [
-          "Desenvolveu aplicativo mobile com Flutter no modelo de transporte sob demanda, similar ao Uber, com funcionalidades de geolocalização em tempo real, matching entre motoristas e passageiros e rastreamento de rotas.",
-        ],
+        "company": "Tecno Portas",
+        "role": "Programador Mobile Flutter & Designer",
+        "period": "Mar 2021 – Dez 2022",
+        "location": "Arujá, São Paulo - SP",
+        "description": [
+          "Apps mobile com Flutter.",
+          "Landing pages com React/TypeScript.",
+          "Páginas de campanhas com Wordpress",
+          "Foco em performance e SEO.",
+          "Criação de identidades visuais, layouts para materiais gráficos e redes sociais.",
+        ]
       },
+      {
+        "company": "2eBrain Studios",
+        "role": "Programador Mobile React Native",
+        "period": "Fev 2020 - Nov 2020",
+        "location": "São Miguel Paulista, São Paulo - SP",
+        "description": [
+          "App de transporte sob demanda (modelo similar ao Uber).",
+          "Geolocalização em tempo real, matching entre motoristas e passageiros.",
+          "Rastreamento de rotas e experiência fluida para ambas as pontas."
+        ]
+      }
     ],
-    education: [
-      { course: "Lua", institution: "Udemy", year: "2025", instructor: "TTech Inc" },
-      { course: "Lua", institution: "Particular", year: "2025", instructor: "Paulo Carabalone" },
-      { course: "Ruby", institution: "Udemy", year: "2024", instructor: "Jackson Pires" },
-      { course: "Aplicativos em Flutter", institution: "Flutterando — Masterclass 5", year: "2023", instructor: "Jacob Moura" },
-      { course: "Aplicativos em Flutter", institution: "Flutterando — Masterclass 4", year: "2022", instructor: "Jacob Moura" },
-      { course: "Aplicativos em Flutter", institution: "Flutterando — Masterclass 3", year: "2021", instructor: "Jacob Moura" },
-      { course: "Aplicativos em Flutter", institution: "Flutterando — Masterclass 2", year: "2020", instructor: "Jacob Moura" },
-      { course: "Desenvolvimento em Flutter", institution: "Cod3r", year: "2021", instructor: "Leonardo Moura Leitão" },
-      { course: "NestJS", institution: "Hcode Treinamentos", year: "2021", instructor: "João Rangel" },
-      { course: "UX Design", institution: "Alura", year: "2021" },
-      { course: "UI Design", institution: "Alura", year: "2021" },
-      { course: "JavaScript / Typescript", institution: "Cod3r", year: "2020", instructor: "Leonardo Moura Leitão" },
-      { course: "HTML e CSS", institution: "Alura", year: "2020" },
-      { course: "Design Gráfico", institution: "Alura", year: "2020" },
+    "formations": [
+      { "course": "Análise e Desenvolvimento de Sistemas", "institution": "Descomplica", "year": "2021 - 2023" }
     ],
+    "courses": [
+      { "course": "Go", "institution": "Udemy", "year": "2024" },
+      { "course": "Go", "institution": "Particular", "year": "2024" },
+      { "course": "Java", "institution": "Udemy", "year": "2023" },
+      { "course": "Lua", "institution": "Udemy", "year": "2023" },
+      { "course": "Lua", "institution": "Particular", "year": "2023" },
+      { "course": "React Native", "institution": "Udemy", "year": "2023" },
+      { "course": "ExpoJS", "institution": "Udemy", "year": "2023" },
+      { "course": "Flutter", "institution": "Flutterando", "year": "2023" },
+      { "course": "Java", "institution": "Particular", "year": "2022" },
+      { "course": "C#", "institution": "Udemy", "year": "2022" },
+      { "course": "C#", "institution": "Particular", "year": "2022" },
+      { "course": "NestJS", "institution": "Udemy", "year": "2022" },
+      { "course": "NextJS", "institution": "Udemy", "year": "2022" },
+      { "course": "SpringBoot", "institution": "Udemy", "year": "2022" },
+      { "course": "React Native", "institution": "Udemy", "year": "2022" },
+      { "course": "Flutter", "institution": "Flutterando", "year": "2022" },
+      { "course": "Ruby", "institution": "Udemy", "year": "2021" },
+      { "course": "Flutter", "institution": "Flutterando", "year": "2021" },
+      { "course": "Flutter", "institution": "Cod3r", "year": "2021" },
+      { "course": "NestJS", "institution": "Hcode Treinamentos", "year": "2021" },
+      { "course": ".NET", "institution": "Udemy", "year": "2020" },
+      { "course": "Flutter", "institution": "Flutterando", "year": "2020" },
+      { "course": "UX Design", "institution": "Alura", "year": "2020" },
+      { "course": "UI Design", "institution": "Alura", "year": "2020" },
+      { "course": "JavaScript / TypeScript", "institution": "Cod3r", "year": "2020" },
+      { "course": "HTML e CSS", "institution": "Alura", "year": "2020" },
+      { "course": "Design Gráfico", "institution": "Alura", "year": "2020" }
+    ]
   },
 }
 

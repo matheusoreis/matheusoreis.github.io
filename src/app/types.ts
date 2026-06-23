@@ -70,14 +70,18 @@ export interface EducationData {
     course: string
     institution: string
     year: string
-    instructor?: string
 }
+
+export interface FormationData extends EducationData { }
+
+export interface CourseData extends EducationData { }
 
 export interface ResumeData {
     title: string
     subtitle?: string
     experience: ExperienceData[]
-    education: EducationData[]
+    formations: FormationData[]
+    courses: CourseData[]
 }
 
 export interface AppData {
