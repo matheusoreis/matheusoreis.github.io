@@ -11,8 +11,8 @@ import { File } from "./app/components/icons/file"
 import { Home } from "./app/components/icons/home"
 import { User } from "./app/components/icons/user"
 
-import heroBg from "./app/assets/hero-bg.jpg"
-import profileImg from "./app/assets/profile-img.jpg"
+import heroBg from "./app/assets/hero.jpg"
+import profileImg from "./app/assets/profile.jpg"
 
 import "./index.css"
 import { ManualGearbox } from "./app/components/icons/manual-gearbox"
