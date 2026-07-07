@@ -33,6 +33,7 @@ const data: AppData = {
       "Desenvolvedor C#",
       "Desenvolvedor Java",
       "Desenvolvedor GO",
+      "Desenvolvedor PHP",
       "Designer UX/UI",
     ],
     socialLinks: [
