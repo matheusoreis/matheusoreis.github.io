@@ -52,7 +52,7 @@ const data: AppData = {
   },
   about: {
     title: "Sobre",
-    description: "Desenvolvedor full-cycle com experiência em aplicações de grande escala e alto volume transacional. Atuo em todas as camadas, back-end (Go, Java, C#, JS/TS), front-end (React, Vue, Angular, Solid, Svelte, VanillaJS, HTML & CSS) e mobile (Flutter, React Native), sempre com foco em performance, manutenibilidade e entrega de valor. Tenho conhecimento em Inteligência Artificial, incluindo integração com APIs de LLMs (OpenAI, Google Gemini, Anthropic), agentes autônomos, RAG (Retrieval-Augmented Generation) e automação inteligente com n8n, aplicando essas tecnologias para otimizar processos e criar experiências mais inteligentes. Minha visão holística do produto, combinada com expertise em UX/UI e design systems, garante que cada solução seja tecnicamente robusta e intuitiva para o usuário, gerando impacto real para o negócio.",
+    description: "Desenvolvedor full-cycle com experiência em aplicações de grande escala e alto volume transacional. Atuo em todas as camadas, back-end (Go, Java, C#, JS/TS, PHP), front-end (React, Vue, Angular, Solid, Svelte, VanillaJS, Flutter) e mobile (Flutter, React Native), sempre com foco em performance, manutenibilidade, entrega de valor e evolução contínua do produto. Tenho uma visão orientada a produto, buscando compreender as necessidades do negócio e dos usuários para transformar requisitos em soluções que gerem impacto mensurável. Possuo conhecimento em Inteligência Artificial, incluindo integração com APIs de LLMs (OpenAI, Google Gemini, Anthropic), agentes autônomos, RAG (Retrieval-Augmented Generation) e automação inteligente com n8n, aplicando essas tecnologias para otimizar processos e criar experiências mais inteligentes. Minha visão holística do desenvolvimento, combinada com expertise em UX/UI, design systems e pensamento de produto, garante que cada solução seja tecnicamente robusta, intuitiva para o usuário e alinhada aos objetivos estratégicos do negócio.",
     profileImage: profileImg,
     subtitle: "Desenvolvedor Fullstack, Mobile & Designer UX/UI.",
     details: [
@@ -77,6 +77,7 @@ const data: AppData = {
           { label: "Go" },
           { label: "Java" },
           { label: "C#" },
+          { label: "PHP" },
           { label: "Dart" },
           { label: "Lua" },
         ],
@@ -117,7 +118,10 @@ const data: AppData = {
           { label: ".NET" },
 
           { label: "Darto" },
-          { label: "Vaden" },
+          { label: "Darto" },
+
+          { label: "Laravel" },
+          { label: "CodeIgniter" },
         ],
       },
       {
@@ -205,7 +209,7 @@ const data: AppData = {
         "location": "São Paulo - SP",
         "description": [
           "Front-end com Angular e React.",
-          "Backend-end com C# e .NET.",
+          "Backend-end com C# e .NET e PHP legado.",
           "Banco de dados SQL Server com modelagem otimizada para consultas complexas.",
           "Desenvolvimento de aplicativos com React Native e flutter para produtores de música com dashboard em tempo real.",
           "Monitoramento de métricas e performance ao vivo para tomada de decisão rápida."
@@ -264,7 +268,7 @@ const data: AppData = {
       },
       {
         "company": "2eBrain Studios",
-        "role": "Programador Mobile React Native",
+        "role": "Programador Mobile React Native e PHP",
         "period": "Fev 2020 - Nov 2020",
         "location": "São Miguel Paulista, São Paulo - SP",
         "description": [
@@ -298,6 +302,10 @@ const data: AppData = {
       { "course": "Flutter", "institution": "Flutterando", "year": "2021" },
       { "course": "Flutter", "institution": "Cod3r", "year": "2021" },
       { "course": "NestJS", "institution": "Hcode Treinamentos", "year": "2021" },
+      { "course": "CodeIgniter", "institution": "Udemy", "year": "2021" },
+      { "course": "Laravel", "institution": "Udemy", "year": "2021" },
+      { "course": "PHP", "institution": "Udemy", "year": "2021" },
+      { "course": "PHP", "institution": "Alura", "year": "2021" },
       { "course": ".NET", "institution": "Udemy", "year": "2020" },
       { "course": "Flutter", "institution": "Flutterando", "year": "2020" },
       { "course": "UX Design", "institution": "Alura", "year": "2020" },
