@@ -28,13 +28,16 @@ const data: AppData = {
     name: "Matheus Reis",
     backgroundImage: heroBg,
     typedStrings: [
-      "Desenvolvedor JavaScript/Typescript",
+      "Desenvolvedor JavaScript",
+      "Desenvolvedor TypeScript",
       "Desenvolvedor Dart",
-      "Desenvolvedor C#",
       "Desenvolvedor Java",
+      "Desenvolvedor C#",
       "Desenvolvedor GO",
-      "Desenvolvedor PHP",
+      "Desenvolvedor Godot",
       "Designer UX/UI",
+      "IA Cleaning",
+      "Prompt Engineer"
     ],
     socialLinks: [
       { label: "WhatsApp", href: "https://wa.me/5579991045415", icon: <BrandWhatsApp size={32} /> },
@@ -53,9 +56,9 @@ const data: AppData = {
   },
   about: {
     title: "Sobre",
-    description: "Desenvolvedor full-cycle com experiência em aplicações de grande escala e alto volume transacional. Atuo em todas as camadas, back-end (Go, Java, C#, JS/TS, PHP), front-end (React, Vue, Angular, Solid, Svelte, VanillaJS, Flutter) e mobile (Flutter, React Native), sempre com foco em performance, manutenibilidade, entrega de valor e evolução contínua do produto. Tenho uma visão orientada a produto, buscando compreender as necessidades do negócio e dos usuários para transformar requisitos em soluções que gerem impacto mensurável. Possuo conhecimento em Inteligência Artificial, incluindo integração com APIs de LLMs (OpenAI, Google Gemini, Anthropic), agentes autônomos, RAG (Retrieval-Augmented Generation) e automação inteligente com n8n, aplicando essas tecnologias para otimizar processos e criar experiências mais inteligentes. Minha visão holística do desenvolvimento, combinada com expertise em UX/UI, design systems e pensamento de produto, garante que cada solução seja tecnicamente robusta, intuitiva para o usuário e alinhada aos objetivos estratégicos do negócio.",
+    description: "Desenvolvedor fullstack com experiência em aplicações de grande escala e alto volume transacional. Atuo em todas as camadas, back-end (Go, Java, C#, JS/TS, Dart, GDScript), front-end (ReactJS, PreactJS, SolidJS, NextJS, AstroJS, VanillaJS, Svelte, Vue, Angular, Flutter) e mobile (Flutter, React Native, Ionic), sempre com foco em performance, manutenibilidade, escalabilidade, entrega de valor e evolução contínua do produto. Tenho uma visão orientada a produto, buscando compreender as necessidades do negócio e dos usuários para transformar requisitos em soluções. Possuo conhecimento em Inteligência Artificial, incluindo integração com APIs de LLMs (OpenAI, Google Gemini, Anthropic), agentes autônomos, RAG (Retrieval-Augmented Generation) e automação inteligente com n8n, aplicando essas tecnologias para otimizar processos e criar experiências mais inteligentes. Minha visão holística do desenvolvimento, combinada com expertise em UX/UI, design systems e pensamento de produto, garante que cada solução seja tecnicamente robusta, intuitiva para o usuário e alinhada aos objetivos estratégicos do negócio.",
     profileImage: profileImg,
-    subtitle: "Desenvolvedor Fullstack, Mobile & Designer UX/UI.",
+    subtitle: "Desenvolvedor Fullstack, Mobile, Designer UX/UI e Analista de Sistemas.",
     details: [
       { label: "Nome", value: "Matheus Reis de Oliveira" },
       { label: "E-mail", value: "reisdev.matheus@gmail.com", href: "mailto:reisdev.matheus@gmail.com" },
@@ -90,13 +93,12 @@ const data: AppData = {
           { label: "ReactJS" },
           { label: "PreactJS" },
           { label: "SolidJS" },
-          { label: "Svelte" },
-          { label: "Vue" },
-          { label: "Angular" },
           { label: "NextJS" },
           { label: "AstroJS" },
           { label: "VanillaJS" },
-          { label: "HTML/CSS" },
+          { label: "Svelte" },
+          { label: "Vue" },
+          { label: "Angular" },
         ],
       },
       {
@@ -119,10 +121,7 @@ const data: AppData = {
           { label: ".NET" },
 
           { label: "Darto" },
-          { label: "Darto" },
-
-          { label: "Laravel" },
-          { label: "CodeIgniter" },
+          { label: "Vaden" },
         ],
       },
       {
@@ -133,6 +132,7 @@ const data: AppData = {
           { label: "iOS" },
           { label: "Flutter" },
           { label: "React Native" },
+          { label: "Ionic" },
           { label: "Expo" },
         ],
       },
@@ -191,42 +191,42 @@ const data: AppData = {
     title: "Resumo",
     experience: [
       {
-        "company": "MegaGym Academias",
-        "role": "Desenvolvedor Mobile Flutter & Full-Stack",
-        "period": "Jan 2026 – Mai 2026",
+        "company": "MegaGYM Academias",
+        "role": "Desenvolvedor Mobile Flutter & Back-end Go",
+        "period": "Jan 2026 – Jun 2026",
         "location": "Aracaju - SE",
         "description": [
           "App mobile e dashboard administrativo com Flutter.",
           "Backend com Go + PocketBase.",
           "Feed social, gestão de treinos e acompanhamento nutricional integrados.",
           "Modelagem relacional do banco de dados focada em integridade referencial e performance.",
-          "+25% na retenção de alunos e adoção ativa por mais de 80% dos frequentadores."
+          "Aumento de 25% na retenção de alunos e adoção ativa por mais de 80% dos frequentadores."
         ]
       },
       {
         "company": "DSU Soluções",
-        "role": "Desenvolvedor Mobile Flutter e React Native & Back-end",
+        "role": "Desenvolvedor Mobile Flutter & Full-Stack",
         "period": "Jul 2025 – Dez 2025",
         "location": "São Paulo - SP",
         "description": [
-          "Front-end com Angular e React.",
-          "Backend-end com C# e .NET e PHP legado.",
+          "Front-end com React e Flutter.",
+          "Backend-end com C# e .NET e NestJS.",
           "Banco de dados SQL Server com modelagem otimizada para consultas complexas.",
-          "Desenvolvimento de aplicativos com React Native e flutter para produtores de música com dashboard em tempo real.",
-          "Monitoramento de métricas e performance ao vivo para tomada de decisão rápida."
+          "Desenvolvimento de aplicativos com flutter para produtores de música com dashboard em tempo real.",
+          "Monitoramento de métricas e performance ao vivo para tomada de decisão."
         ]
       },
       {
         "company": "Goodbom Supermercados",
         "role": "Desenvolvedor Mobile Flutter & Full-Stack",
-        "period": "Abr 2024 – Set 2025",
+        "period": "Abr 2024 – Nov 2025",
         "location": "Sumaré, São Paulo - SP",
         "description": [
-          "Ecossistema completo com NextJS, AstroJS (ReactJS & VanillaJS).",
-          "Backend com NestJS e SpringBoot.",
+          "Front-end completo com NextJS, AstroJS e Flutter.",
+          "Backend com NestJS e SpringBoot e java legado.",
           "Clean Architecture e MVVM para baixo acoplamento e alta manutenibilidade.",
           "Integrações com PostgreSQL e OracleDB, priorizando consistência transacional.",
-          "40% menos tempo no processamento de pedidos e 2.000+ transações/dia sem queda."
+          "Melhora de 40% no tempo no processamento de pedidos e 2.000+ transações/dia sem queda."
         ]
       },
       {
@@ -238,8 +238,6 @@ const data: AppData = {
           "Criação da identidade visual oficial da maior comunidade Flutter do Brasil.",
           "Definição de tipografia, paleta, hierarquia visual e sistema de componentes.",
           "Pesquisas completas de UX/UI",
-          "Diretrizes adotadas em 5+ eventos oficiais.",
-          "Materiais alcançaram mais de 10.000 desenvolvedores."
         ]
       },
       {
@@ -248,7 +246,7 @@ const data: AppData = {
         "period": "Jan 2023 – Mar 2024",
         "location": "São Mateus do Sul, Paraná - PR",
         "description": [
-          "App multiplataforma em Flutter com offline first.",
+          "App multiplataforma em Flutter com técnica de offline first.",
           "Consumo de APIs REST e integração com sistemas legados em Delphi.",
           "Geolocalização, Criação de rotas até o endereço e acompanhamento do dispositivo conectado em tempo real.",
           "Manutenção de servidores Linux.",
@@ -256,12 +254,12 @@ const data: AppData = {
       },
       {
         "company": "Tecno Portas",
-        "role": "Programador Mobile Flutter & Designer",
+        "role": "Programador Mobile Flutter, Front-end & Designer",
         "period": "Mar 2021 – Dez 2022",
         "location": "Arujá, São Paulo - SP",
         "description": [
           "Apps mobile com Flutter.",
-          "Landing pages com React/TypeScript.",
+          "Landing pages com React/TypeScript e PHP.",
           "Páginas de campanhas com Wordpress",
           "Foco em performance e SEO.",
           "Criação de identidades visuais, layouts para materiais gráficos e redes sociais.",
@@ -276,6 +274,17 @@ const data: AppData = {
           "App de transporte sob demanda (modelo similar ao Uber).",
           "Geolocalização em tempo real, matching entre motoristas e passageiros.",
           "Rastreamento de rotas e experiência fluida para ambas as pontas."
+        ]
+      },
+      {
+        "company": "Ativa Logística",
+        "role": "Analista de Suporte e Designer Gráfico & Web Designer",
+        "period": "Out 2017 - Jun 2019",
+        "location": "São Miguel Paulista, São Paulo - SP",
+        "description": [
+          "Suporte técnico e manutenção de computadores, redes e servidores.",
+          "Desenvolvimento de landing pages.",
+          "Desenvolvimento de artes para materiais gráficos e redes sociais."
         ]
       }
     ],
