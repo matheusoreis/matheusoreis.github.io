@@ -82,7 +82,7 @@ const data: AppData = {
 | Arquivo | Onde usar |
 |---|---|
 | `src/app/assets/hero.jpg` | Imagem de fundo do Hero |
-| `src/app/assets/profile.jpg` | Foto de perfil na seção Sobre |
+| `src/app/assets/profile.png` | Foto de perfil na seção Sobre |
 
 ### 5. Rode localmente
 
