@@ -22,6 +22,7 @@ import AOS from "aos"
 
 import "./index.css"
 import "aos/dist/aos.css"
+import { Shield } from "./app/components/icons/shield"
 
 const data: AppData = {
   hero: {
@@ -233,6 +234,21 @@ const data: AppData = {
           { label: "Prompt Engineering" },
         ],
       },
+
+      {
+        title: "Segurança da Informação",
+        icon: <Shield size={26} />,
+        skills: [
+          { label: "Fundamentos de SIEM" },
+          { label: "Análise de Logs" },
+          { label: "Redes (TCP/IP, DNS, HTTP)" },
+          { label: "Linux" },
+          { label: "Windows" },
+          { label: "Hardening" },
+          { label: "Gestão de Vulnerabilidades" },
+          { label: "Fundamentos de Pentest" },
+        ],
+      }
     ],
   },
 
@@ -356,6 +372,11 @@ const data: AppData = {
     ],
 
     courses: [
+      { course: "Segurança da Informação", institution: "Estudos autônomos", year: "2026" },
+      { course: "Pentest e Ethical Hacking", institution: "Estudos autônomos", year: "2026" },
+      { course: "Elastic Stack (Elasticsearch, Logstash, Kibana)", institution: "Estudos autônomos", year: "2026" },
+      { course: "Redes e Protocolos (TCP/IP, DNS, HTTP)", institution: "Estudos autônomos", year: "2026" },
+      { course: "Linux para Segurança", institution: "Estudos autônomos", year: "2026" },
       { course: "Go", institution: "Udemy", year: "2024" },
       { course: "Go", institution: "Particular", year: "2024" },
       { course: "Java", institution: "Udemy", year: "2023" },
