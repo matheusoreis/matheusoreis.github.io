@@ -72,9 +72,9 @@ const data: AppData = {
   about: {
     title: "Sobre",
     description:
-      "Desenvolvedor Fullstack com atuação ponta a ponta em produtos web (React, Next, Preact, Solid, Vue, Svelte), mobile (Flutter, React Native, Expo) e back-end (NodeJS, BunJS, DenoJS, Go, C#, PHP, Dart). Da arquitetura e modelagem de dados até a entrega e evolução contínua. Sempre com foco em performance, escalabilidade e experiência do usuário. Tenho base sólida em UX/UI e design systems e design o que me permite conectar decisões técnicas a necessidades reais do produto. Atualmente, aprofundo conhecimento em Inteligência Artificial, integrando LLMs e construindo agentes e automações inteligentes.",
+      "Engenheiro de Software com mais de 5 anos de experiência desenvolvendo aplicações mobile e backend em produção, com atuação ponta a ponta: arquitetura, modelagem de dados, APIs REST, integrações com sistemas legados, performance e evolução contínua do produto. Experiência prática com C#/.NET, Flutter, Go, NestJS e Spring Boot, aplicando Clean Architecture e MVVM em bases de código reais. Em projetos recentes, entreguei mais de 15 funcionalidades em 6 meses em uma plataforma mobile usada por mais de 80% dos frequentadores de uma rede de academias, contribuí para +25% de retenção de alunos, otimizei o processamento de pedidos em 40% com mais de 2.000 transações diárias e reduzi em ~35% o tempo de resposta de consultas complexas em SQL Server. Base sólida em UX/UI e design systems, o que conecta decisões técnicas às necessidades reais do produto.",
     profileImage: profileImg,
-    subtitle: "Desenvolvedor Fullstack, Mobile, Designer, UX/UI e Analista de Sistemas.",
+    subtitle: "Software Engineer | Full Stack & Mobile Developer | AI Entusiasta",
     details: [
       { label: "Nome", value: "Matheus Reis de Oliveira" },
       {
@@ -93,6 +93,11 @@ const data: AppData = {
         value: "/matheusoreis",
         href: "https://github.com/matheusoreis/",
       },
+      {
+        label: "LinkedIn",
+        value: "linkedin.com/in/oliveirareiss",
+        href: "https://www.linkedin.com/in/oliveirareiss/",
+      },
     ],
   },
 
@@ -104,15 +109,15 @@ const data: AppData = {
         title: "Linguagens",
         icon: <Code size={26} />,
         skills: [
+          { label: "C#" },
           { label: "TypeScript" },
           { label: "Go" },
-          { label: "Rust" },
-          { label: "Dart" },
-          { label: "C#" },
           { label: "Java" },
+          { label: "Dart" },
           { label: "JavaScript" },
-          { label: "Odin" },
           { label: "PHP" },
+          { label: "Rust" },
+          { label: "Odin" },
           { label: "Lua" },
           { label: "GDScript" },
         ],
@@ -138,8 +143,11 @@ const data: AppData = {
         title: "Backend",
         icon: <Server size={26} />,
         skills: [
-          { label: "Node.js" },
+          { label: ".NET" },
+          { label: "Entity Framework" },
           { label: "NestJS" },
+          { label: "Node.js" },
+          { label: "Spring Boot" },
           { label: "Express" },
           { label: "Fastify" },
           { label: "Hono" },
@@ -147,9 +155,7 @@ const data: AppData = {
           { label: "Deno" },
           { label: "Fiber" },
           { label: "Gorilla" },
-          { label: "Spring Boot" },
           { label: "Javalin" },
-          { label: ".NET" },
           { label: "Laravel" },
           { label: "Darto" },
           { label: "Vaden" },
@@ -173,8 +179,8 @@ const data: AppData = {
         title: "Banco de dados",
         icon: <Database size={26} />,
         skills: [
-          { label: "PostgreSQL" },
           { label: "SQL Server" },
+          { label: "PostgreSQL" },
           { label: "OracleDB" },
           { label: "MySQL" },
           { label: "Redis" },
@@ -189,6 +195,9 @@ const data: AppData = {
           { label: "Clean Architecture" },
           { label: "MVVM" },
           { label: "REST APIs" },
+          { label: "WebSocket" },
+          { label: "SSE" },
+          { label: "TCP/UDP" },
           { label: "Offline First" },
           { label: "Design Systems" },
           { label: "UX/UI" },
@@ -258,44 +267,59 @@ const data: AppData = {
     experience: [
       {
         company: "MegaGYM Academias",
-        role: "Desenvolvedor Mobile (Flutter) e Back-end (Go)",
+        role: "Software Engineer — Mobile (Flutter) e Backend (Go)",
         period: "01/2026 - Atual",
         location: "Aracaju, SE",
         description: [
-          "Desenvolvi app mobile e dashboard administrativo em Flutter, com back-end em Go e PocketBase, unificando feed social, gestão de treinos e acompanhamento nutricional em 1 única plataforma.",
-          "Modelei e otimizei banco de dados com +40 tabelas, priorizando integridade referencial, consistência e performance.",
-          "Atuei de ponta a ponta no produto, da arquitetura à evolução contínua, entregando +15 features em 6 meses.",
-          "Contribuí para +25% de retenção de alunos e adoção ativa por +80% dos frequentadores.",
-          "Stack: Flutter, Go, PocketBase, Modelagem de Dados, Clean Architecture.",
+          "Arquitetei e desenvolvi do zero um app mobile e um dashboard administrativo em Flutter, com backend em Go e PocketBase, unificando feed social, gestão de treinos e acompanhamento nutricional em uma única plataforma.",
+          "Modelei e otimizei um banco de dados com mais de 40 tabelas, priorizando integridade referencial, consistência e performance.",
+          "Atuei de ponta a ponta no produto, da arquitetura à evolução contínua, entregando mais de 15 funcionalidades em 6 meses com Clean Architecture.",
+          "Contribuí para +25% de retenção de alunos e para a adoção ativa por mais de 80% dos frequentadores.",
+          "Stack: Flutter, Dart, Go, PocketBase, Clean Architecture, Modelagem de Dados.",
         ],
       },
 
       {
         company: "DSU Soluções",
-        role: "Desenvolvedor Mobile (Flutter) e Full Stack",
+        role: "Software Engineer — Full Stack (C#/.NET, NestJS) e Mobile (Flutter)",
         period: "07/2025 - 12/2025",
         location: "São Paulo, SP",
         description: [
-          "Construí +5 aplicações web e mobile com React, Flutter, C#/.NET e NestJS.",
-          "Projetei apps para produtores de música integrados a dashboards em tempo real, com +20 métricas e KPIs para apoiar decisões.",
-          "Modelei e otimizei bases SQL Server para consultas complexas, reduzindo tempo de resposta em ~35%.",
-          "Atuei em full stack na construção e integração de +30 endpoints de APIs e serviços de negócio.",
-          "Stack: React, Flutter, C#/.NET, NestJS, SQL Server, REST APIs.",
+          "Construí mais de 5 aplicações web e mobile com C#/.NET, NestJS, React e Flutter.",
+          "Projetei apps para produtores de música integrados a dashboards em tempo real, com mais de 20 métricas e KPIs para apoiar decisões de negócio.",
+          "Modelei e otimizei bases SQL Server para consultas complexas, reduzindo o tempo de resposta em ~35%.",
+          "Desenvolvi e integrei mais de 30 endpoints de APIs REST e serviços de negócio.",
+          "Stack: C#/.NET, SQL Server, NestJS, React, Flutter, REST APIs.",
         ],
       },
 
       {
         company: "Goodbom Supermercados",
-        role: "Desenvolvedor Mobile (Flutter) e Full Stack",
+        role: "Software Engineer — Mobile (Flutter) e Full Stack",
         period: "04/2024 - 11/2025",
         location: "Sumaré, SP",
         description: [
-          "Implementei +5 aplicações web e mobile com Next.js, Astro e Flutter.",
-          "Desenvolvi e mantive +50 APIs e serviços com NestJS, Spring Boot e Java legado.",
-          "Apliquei Clean Architecture e MVVM, reduzindo acoplamento e facilitando manutenção em ~40% do código.",
-          "Integrei PostgreSQL e OracleDB, garantindo 92% de consistência transacional e confiabilidade dos dados.",
-          "Otimizei o processamento de pedidos em 40%, mantendo estabilidade com +2.000 transações diárias.",
-          "Stack: Next.js, Astro, Flutter, NestJS, Spring Boot, Java, PostgreSQL, OracleDB, Clean Architecture, MVVM.",
+          "Desenvolvi e mantive mais de 50 APIs e serviços em produção com NestJS, Spring Boot e Java legado.",
+          "Implementei mais de 5 aplicações web e mobile com Next.js, Astro e Flutter.",
+          "Apliquei Clean Architecture e MVVM em ~40% da base de código, reduzindo acoplamento e facilitando a manutenção.",
+          "Otimizei o processamento de pedidos em 40%, mantendo estabilidade com mais de 2.000 transações diárias.",
+          "Integrei PostgreSQL e OracleDB garantindo consistência transacional e confiabilidade dos dados.",
+          "Stack: NestJS, Spring Boot, Java, Next.js, Astro, Flutter, PostgreSQL, OracleDB, Clean Architecture, MVVM.",
+        ],
+      },
+
+      {
+        company: "Freelance",
+        role: "Backend Developer — Servidores de Jogos em Tempo Real",
+        period: "04/2025 - 05/2026",
+        location: "Remoto",
+        description: [
+          "Desenvolvi servidores de jogos multiplayer em tempo real com comunicação via WebSocket, implementando a mesma proposta em stacks diferentes para comparar abordagens de arquitetura e performance.",
+          "Implementei um servidor de jogos em Java com Spring Boot e WebSocket.",
+          "Implementei um servidor de jogos em C#/.NET com WebSocket e Entity Framework para persistência de dados.",
+          "Implementei um servidor de jogos em TypeScript/JavaScript (Node.js) com WebSocket.",
+          "Desenvolvi um projeto de jogo com Godot (GDScript) integrado a servidor em tempo real.",
+          "Stack: Java, Spring Boot, C#/.NET, Entity Framework, TypeScript, Node.js, WebSocket, Godot.",
         ],
       },
 
@@ -305,10 +329,9 @@ const data: AppData = {
         period: "04/2025 - 05/2025",
         location: "Remoto",
         description: [
-          "Criei a identidade visual oficial da Flutterando, uma das maiores comunidades brasileiras de Flutter com +30 mil membros.",
-          "Defini tipografia, paleta de cores e hierarquia visual.",
-          "Conduzi pesquisas e decisões de UX/UI alinhadas às necessidades do produto e dos usuários.",
-          "Stack: UX/UI, Design System, Figma, Pesquisa com Usuários.",
+          "Criei a identidade visual oficial da Flutterando, uma das maiores comunidades brasileiras de Flutter, com mais de 30 mil membros.",
+          "Defini tipografia, paleta de cores, hierarquia visual e design system, conduzindo pesquisas com usuários para embasar as decisões de UX/UI.",
+          "Stack: Figma, Design System, UX/UI, Pesquisa com Usuários.",
         ],
       },
 
@@ -318,24 +341,23 @@ const data: AppData = {
         period: "01/2023 - 03/2024",
         location: "São Mateus do Sul, PR",
         description: [
-          "Arquitetei aplicação mobile multiplataforma em Flutter com estratégia Offline First, atendendo +40 usuários ativos.",
-          "Integrei +20 APIs REST e sistemas legados em Delphi, garantindo compatibilidade total.",
-          "Implementei geolocalização, criação de rotas e acompanhamento de dispositivos em tempo real com latência < 2s.",
-          "Administrei e mantive +3 servidores Linux com 99,5% de uptime.",
+          "Arquitetei um aplicativo mobile multiplataforma em Flutter com estratégia Offline First, atendendo mais de 40 usuários ativos.",
+          "Integrei mais de 20 APIs REST e sistemas legados em Delphi, garantindo compatibilidade total.",
+          "Implementei geolocalização, criação de rotas e acompanhamento de dispositivos em tempo real com latência inferior a 2s.",
+          "Administrei e mantive mais de 3 servidores Linux com 99,5% de uptime.",
           "Stack: Flutter, Offline First, REST APIs, Delphi, Linux.",
         ],
       },
 
       {
         company: "Tecno Portas",
-        role: "Desenvolvedor Mobile (Flutter), Front-end e Designer",
+        role: "Desenvolvedor Mobile (Flutter) e Front-end",
         period: "03/2021 - 12/2022",
         location: "Arujá, SP",
         description: [
           "Desenvolvi aplicações mobile em Flutter para iOS e Android.",
-          "Construí +5 landing pages e aplicações web com React, TypeScript e PHP, e páginas de campanha em WordPress, com foco em performance e SEO (PageSpeed 90+).",
-          "Produzi +5 identidades visuais, layouts e materiais gráficos para campanhas e redes sociais.",
-          "Stack: Flutter, React, TypeScript, PHP, WordPress, SEO, Design Gráfico.",
+          "Construí mais de 5 landing pages e aplicações web com React, TypeScript e PHP, com foco em performance e SEO (PageSpeed 90+).",
+          "Stack: Flutter, React, TypeScript, PHP, WordPress, SEO.",
         ],
       },
 
@@ -345,20 +367,19 @@ const data: AppData = {
         period: "02/2020 - 11/2020",
         location: "São Paulo, SP",
         description: [
-          "Evoluí aplicativo de transporte sob demanda no modelo de plataformas de mobilidade, com geolocalização em tempo real e matching entre motoristas e passageiros.",
-          "Stack: React Native, PHP, Geolocalização, Matching em Tempo Real.",
+          "Evoluí um aplicativo de transporte sob demanda, com geolocalização em tempo real e matching entre motoristas e passageiros.",
+          "Stack: React Native, PHP, Geolocalização.",
         ],
       },
 
       {
         company: "Ativa Logística",
-        role: "Analista de Suporte, Designer Gráfico e Web Designer",
+        role: "Analista de Suporte e Web Designer",
         period: "10/2017 - 06/2019",
         location: "São Paulo, SP",
         description: [
-          "Prestei suporte técnico e manutenção de +50 computadores, redes e servidores, com SLA de 95% de resolução no mesmo dia.",
-          "Produzi e mantive landing pages e páginas institucionais, além de materiais gráficos para campanhas e redes sociais.",
-          "Stack: Suporte Técnico, Redes, Servidores, Web Design, Design Gráfico.",
+          "Prestei suporte técnico e manutenção de mais de 50 computadores, redes e servidores, com 95% de resolução no mesmo dia.",
+          "Stack: Suporte Técnico, Redes, Servidores, Web Design.",
         ],
       },
     ],
@@ -367,8 +388,13 @@ const data: AppData = {
       {
         course: "Análise e Desenvolvimento de Sistemas",
         institution: "Descomplica",
-        year: "2021 - 2023",
+        year: "2026 - 2030",
       },
+    ],
+
+    languages: [
+      { language: "Português", detail: "Nativo" },
+      { language: "Inglês", detail: "Técnico" },
     ],
 
     courses: [

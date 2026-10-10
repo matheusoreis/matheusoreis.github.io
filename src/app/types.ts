@@ -76,12 +76,18 @@ export interface FormationData extends EducationData { }
 
 export interface CourseData extends EducationData { }
 
+export interface LanguageData {
+    language: string
+    detail?: string
+}
+
 export interface ResumeData {
     title: string
     subtitle?: string
     experience: ExperienceData[]
     formations: FormationData[]
     courses: CourseData[]
+    languages?: LanguageData[]
 }
 
 export interface AppData {

@@ -39,6 +39,24 @@ interface ExportLanguage {
     detail?: string
 }
 
+// Ordem das categorias de competências no PDF (as não listadas vão para o final)
+const SKILL_ORDER = [
+    "Linguagens",
+    "Backend",
+    "Banco de dados",
+    "Mobile",
+    "Arquitetura e Práticas",
+    "Frontend",
+    "DevOps & Cloud",
+    "Inteligência Artificial",
+    "BaaS & Automação",
+]
+// Categorias e itens que ficam no portfólio, mas não entram no PDF
+const SKILL_HIDE_CATEGORIES = new Set(["Segurança da Informação"])
+const SKILL_HIDE_LABELS = new Set(["Odin", "Lua", "GDScript", "Gorilla", "Darto", "Vaden", "Javalin", "Ionic", "Appwrite"])
+
+const isStackLine = (d: string) => /^stack:/i.test(d.trim())
+
 const toArray = (v?: string | string[]) => (v == null ? [] : Array.isArray(v) ? v : [v])
 
 class Cursor {
@@ -177,9 +195,9 @@ export function exportPDF(data: AppData, includeCourses = false) {
 
     doc.setProperties({
         title: `${name} - Currículo`,
-        subject: "Currículo Profissional - Desenvolvedor Full Stack",
+        subject: "Currículo Profissional - Software Engineer Mobile e Backend",
         author: name,
-        keywords: "Desenvolvedor Full Stack, Flutter, Go, React, Next.js, TypeScript, Node.js, QA, Desenvolvedor",
+        keywords: "Software Engineer, C#, .NET, SQL Server, Flutter, Dart, Go, NestJS, Spring Boot, TypeScript, Node.js, REST APIs, Clean Architecture, PostgreSQL, Mobile, Backend, Full Stack",
         creator: name,
     })
 
@@ -192,6 +210,11 @@ export function exportPDF(data: AppData, includeCourses = false) {
     const phone = detail(/contato|telefone|fone|celular|whatsapp/i)
     const city = detail(/cidade/i)
     const linkedin = detail(/linkedin/i)
+    const githubRaw = detail(/github/i)
+    const github = githubRaw
+        ? /^https?:\/\//i.test(githubRaw) ? githubRaw.replace(/^https?:\/\//i, "").replace(/\/$/, "")
+            : githubRaw.startsWith("/") ? `github.com${githubRaw}` : githubRaw
+        : undefined
 
     const contactParts: Seg[][] = []
     if (email) contactParts.push([{ text: `E-mail: ${email}` }])
@@ -201,6 +224,12 @@ export function exportPDF(data: AppData, includeCourses = false) {
         contactParts.push([{
             text: `LinkedIn: ${linkedin}`,
             url: /^https?:\/\//i.test(linkedin) ? linkedin : `https://${linkedin}`,
+        }])
+    }
+    if (github) {
+        contactParts.push([{
+            text: `GitHub: ${github}`,
+            url: /^https?:\/\//i.test(github) ? github : `https://${github}`,
         }])
     }
 
@@ -227,6 +256,25 @@ export function exportPDF(data: AppData, includeCourses = false) {
     doc.text(String(about.description || ""), MARGIN, cursor.y, { maxWidth: CONTENT_W, align: "justify" })
     cursor.advance(summaryLines.length * summaryLH + 1)
 
+    sectionTitle(doc, cursor, "Competências Técnicas")
+    const orderOf = (t: string) => {
+        const i = SKILL_ORDER.indexOf(t)
+        return i === -1 ? SKILL_ORDER.length : i
+    }
+        ;[...skills.categories]
+            .filter(cat => !SKILL_HIDE_CATEGORIES.has(cat.title))
+            .sort((a, b) => orderOf(a.title) - orderOf(b.title))
+            .forEach(cat => {
+                const labels = cat.skills.map(s => s.label).filter(l => !SKILL_HIDE_LABELS.has(l))
+                if (labels.length === 0) return
+                cursor.ensure(6)
+                rich(doc, cursor, [
+                    { text: `${cat.title}: `, style: "bold", color: COLOR.secondary },
+                    { text: labels.join(", ") },
+                ], { lineH: 4.8 })
+                cursor.advance(0.6)
+            })
+
     sectionTitle(doc, cursor, "Experiência Profissional")
     resume.experience.forEach((item, i) => {
         const e = item as typeof item & ExportExtras
@@ -243,9 +291,11 @@ export function exportPDF(data: AppData, includeCourses = false) {
             rich(doc, cursor, [{ text: p }], { lineH: 4.6 })
         })
 
-        if (e.description?.length) {
+        const bullets = (e.description ?? []).filter(d => !isStackLine(d))
+        const stackFromDescription = (e.description ?? []).find(isStackLine)?.replace(/^\s*stack:\s*/i, "")
+        if (bullets.length) {
             cursor.advance(0.8)
-            e.description.forEach(d => bullet(doc, cursor, d))
+            bullets.forEach(d => bullet(doc, cursor, d))
         }
 
         e.projects?.forEach(p => {
@@ -261,7 +311,7 @@ export function exportPDF(data: AppData, includeCourses = false) {
             p.description?.forEach(d => bullet(doc, cursor, d))
         })
 
-        const stack = toArray(e.stack).join(", ")
+        const stack = toArray(e.stack).join(", ") || stackFromDescription || ""
         if (stack) {
             cursor.advance(0.8)
             rich(doc, cursor, [
@@ -306,16 +356,6 @@ export function exportPDF(data: AppData, includeCourses = false) {
             ], { lineH: 4.8 })
         })
     }
-
-    sectionTitle(doc, cursor, "Competências Técnicas")
-    skills.categories.forEach(cat => {
-        cursor.ensure(6)
-        rich(doc, cursor, [
-            { text: `${cat.title}: `, style: "bold", color: COLOR.secondary },
-            { text: cat.skills.map(s => s.label).join(", ") },
-        ], { lineH: 4.8 })
-        cursor.advance(0.6)
-    })
 
     const filename =
         name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-") + ".pdf"
