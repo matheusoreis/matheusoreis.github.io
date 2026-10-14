@@ -29,16 +29,12 @@ const data: AppData = {
     name: "Matheus Reis",
     backgroundImage: heroBg,
     typedStrings: [
-      "Desenvolvedor Fullstack",
-      "Desenvolvedor Mobile",
-      "Desenvolvedor Backend",
-      "Desenvolvedor Frontend",
-      "Flutter Developer",
-      "Go Developer",
-      "TypeScript Developer",
-      "Designer UX/UI",
-      "AI Engineer",
-      "Prompt Engineer",
+      "Desenvolvedor Full Stack",
+      "Suporte N1, N2 e N3",
+      "Desenvolvimento com IA e Agentes",
+      "Implantação de Software",
+      "Suporte ao Cliente",
+      "Ambiente Microsoft",
     ],
     socialLinks: [
       {
@@ -72,9 +68,9 @@ const data: AppData = {
   about: {
     title: "Sobre",
     description:
-      "Engenheiro de Software com mais de 5 anos de experiência desenvolvendo aplicações mobile e backend em produção, com atuação ponta a ponta: arquitetura, modelagem de dados, APIs REST, integrações com sistemas legados, performance e evolução contínua do produto. Experiência prática com C#/.NET, Flutter, Go, NestJS e Spring Boot, aplicando Clean Architecture e MVVM em bases de código reais. Em projetos recentes, entreguei mais de 15 funcionalidades em 6 meses em uma plataforma mobile usada por mais de 80% dos frequentadores de uma rede de academias, contribuí para +25% de retenção de alunos, otimizei o processamento de pedidos em 40% com mais de 2.000 transações diárias e reduzi em ~35% o tempo de resposta de consultas complexas em SQL Server. Base sólida em UX/UI e design systems, o que conecta decisões técnicas às necessidades reais do produto.",
+      "Sou desenvolvedor há mais de 5 anos, com sólida base em C#, TypeScript, JavaScript, Dart, Go e Java. Ao longo da carreira, minha atuação como desenvolvedor foi somada a experiências reais em suporte N1, N2 e, em alguns casos, N3, em suporte ao cliente e em implantação de software. Essa combinação é o meu diferencial: entendo o sistema por dentro e também a realidade de quem o usa, o que me permite investigar um incidente na origem, corrigir com precisão e acompanhar a solução até o usuário. Tenho domínio de SQL em SQL Server, PostgreSQL, MySQL, SQLite e OracleDB, escrevendo, otimizando e investigando consultas complexas para diagnosticar problemas e garantir desempenho e integridade dos dados. Uso Inteligência Artificial e agentes (Claude, OpenAI, Gemini, Ollama, Copilot) no dia a dia para investigar problemas, gerar código e SQLs mais assertivos e acelerar a entrega, sempre com revisão e responsabilidade técnica sobre o resultado. Aprofundei essa prática com cursos e mentorias voltados para IA. Também sei analisar logs, parametrizar soluções, conduzir treinamentos e documentar processos para que outras pessoas consigam seguir. Meu perfil é analítico, comunicativo e orientado a resolver o problema por inteiro, com autonomia para entender o que o usuário precisa e entregar uma solução completa de ponta a ponta.",
     profileImage: profileImg,
-    subtitle: "Software Engineer | Full Stack & Mobile Developer | AI Entusiasta",
+    subtitle: "Desenvolvedor Full Stack | Suporte N1/N2/N3 | Implantação | IA e Agentes",
     details: [
       { label: "Nome", value: "Matheus Reis de Oliveira" },
       {
@@ -103,23 +99,76 @@ const data: AppData = {
 
   skills: {
     title: "Habilidades",
-    subtitle: "Tecnologias que fazem parte do meu stack",
+    subtitle: "Competências técnicas e de implantação",
     categories: [
+      {
+        title: "Inteligência Artificial",
+        icon: <Sparkles size={26} />,
+        skills: [
+          { label: "AI Agents" },
+          { label: "Anthropic Claude" },
+          { label: "OpenAI API" },
+          { label: "Google Gemini" },
+          { label: "Ollama" },
+          { label: "Copilot" },
+          { label: "Prompt Engineering" },
+        ],
+      },
+
+      {
+        title: "Suporte e Sustentação",
+        icon: <User size={26} />,
+        skills: [
+          { label: "Suporte N1/N2/N3" },
+          { label: "Investigação de Incidentes" },
+          { label: "Análise de Logs" },
+          { label: "Consultas SQL" },
+          { label: "Atendimento ao Usuário" },
+          { label: "Documentação de Soluções" },
+          { label: "Escalonamento de Chamados" },
+        ],
+      },
+
+      {
+        title: "Ambiente Microsoft",
+        icon: <Server size={26} />,
+        skills: [
+          { label: "C#/.NET" },
+          { label: "SQL Server" },
+          { label: "Entity Framework" },
+          { label: "Windows" },
+          { label: "Microsoft Teams" },
+          { label: "Microsoft 365" },
+          { label: "Active Directory" },
+          { label: "PowerShell" },
+          { label: "VBNet" },
+        ],
+      },
+
+      {
+        title: "Implantação e Treinamento",
+        icon: <User size={26} />,
+        skills: [
+          { label: "Levantamento de Necessidades" },
+          { label: "Parametrização de Sistemas" },
+          { label: "Treinamento de Usuários" },
+          { label: "Documentação de Processos" },
+          { label: "Acompanhamento Pós-Implantação" },
+          { label: "Suporte ao Cliente" },
+        ],
+      },
+
       {
         title: "Linguagens",
         icon: <Code size={26} />,
         skills: [
           { label: "C#" },
           { label: "TypeScript" },
+          { label: "JavaScript" },
           { label: "Go" },
           { label: "Java" },
           { label: "Dart" },
-          { label: "JavaScript" },
-          { label: "PHP" },
-          { label: "Rust" },
-          { label: "Odin" },
           { label: "Lua" },
-          { label: "GDScript" },
         ],
       },
 
@@ -156,7 +205,6 @@ const data: AppData = {
           { label: "Fiber" },
           { label: "Gorilla" },
           { label: "Javalin" },
-          { label: "Laravel" },
           { label: "Darto" },
           { label: "Vaden" },
         ],
@@ -182,9 +230,9 @@ const data: AppData = {
           { label: "SQL Server" },
           { label: "PostgreSQL" },
           { label: "OracleDB" },
+          { label: "SQLite" },
           { label: "MySQL" },
           { label: "Redis" },
-          { label: "SQLite" },
         ],
       },
 
@@ -232,19 +280,6 @@ const data: AppData = {
       },
 
       {
-        title: "Inteligência Artificial",
-        icon: <Sparkles size={26} />,
-        skills: [
-          { label: "OpenAI API" },
-          { label: "Anthropic Claude" },
-          { label: "Google Gemini" },
-          { label: "Ollama" },
-          { label: "AI Agents" },
-          { label: "Prompt Engineering" },
-        ],
-      },
-
-      {
         title: "Segurança da Informação",
         icon: <Shield size={26} />,
         skills: [
@@ -266,51 +301,69 @@ const data: AppData = {
 
     experience: [
       {
+        company: "Almaviva",
+        role: "Analista de Suporte N1",
+        period: "06/2026 - Atual",
+        location: "Aracaju, SE",
+        description: [
+          "Atendo usuários em primeiro nível, registrando, triando e resolvendo chamados, com escalonamento para os níveis superiores quando necessário.",
+          "Mantenho contato diário com usuários e equipes, comunicando com clareza o andamento e a solução de cada ocorrência.",
+          "Stack: Suporte N1, Atendimento ao Usuário, Gestão de Chamados, Escalonamento.",
+        ],
+      },
+
+      {
         company: "MegaGYM Academias",
-        role: "Software Engineer — Mobile (Flutter) e Backend (Go)",
-        period: "01/2026 - Atual",
+        role: "Software Engineer Mobile e Backend",
+        period: "01/2026 - 06/2026",
         location: "Aracaju, SE",
         description: [
           "Arquitetei e desenvolvi do zero um app mobile e um dashboard administrativo em Flutter, com backend em Go e PocketBase, unificando feed social, gestão de treinos e acompanhamento nutricional em uma única plataforma.",
+          "Realizei o levantamento de necessidades junto à gestão da rede, parametrizei a solução e conduzi treinamentos de capacitação para as equipes que utilizam o sistema.",
+          "Documentei fluxos, regras e procedimentos de uso, e acompanhei os usuários após a implantação, garantindo autonomia das equipes.",
+          "Atuo no suporte N2/N3 da plataforma: investigo incidentes, analiso logs e consultas SQL, corrijo falhas e acompanho cada caso até a resolução.",
+          "Uso IA e agentes (Claude, OpenAI, Gemini) no dia a dia para investigar problemas, gerar código e SQLs mais assertivos e acelerar a entrega e a sustentação.",
           "Modelei e otimizei um banco de dados com mais de 40 tabelas, priorizando integridade referencial, consistência e performance.",
-          "Atuei de ponta a ponta no produto, da arquitetura à evolução contínua, entregando mais de 15 funcionalidades em 6 meses com Clean Architecture.",
           "Contribuí para +25% de retenção de alunos e para a adoção ativa por mais de 80% dos frequentadores.",
-          "Stack: Flutter, Dart, Go, PocketBase, Clean Architecture, Modelagem de Dados.",
+          "Stack: Flutter, Dart, Go, PocketBase, SQL, IA e Agentes, Suporte N2/N3, Treinamento, Documentação.",
         ],
       },
 
       {
         company: "DSU Soluções",
-        role: "Software Engineer — Full Stack (C#/.NET, NestJS) e Mobile (Flutter)",
+        role: "Software Engineer Full Stack e Mobile (Flutter)",
         period: "07/2025 - 12/2025",
         location: "São Paulo, SP",
         description: [
           "Construí mais de 5 aplicações web e mobile com C#/.NET, NestJS, React e Flutter.",
-          "Projetei apps para produtores de música integrados a dashboards em tempo real, com mais de 20 métricas e KPIs para apoiar decisões de negócio.",
+          "Atuei no levantamento de necessidades junto a produtores de música e na parametrização de dashboards em tempo real, com mais de 20 métricas e KPIs.",
+          "Conduzi treinamentos de capacitação para as equipes responsáveis pela utilização da plataforma e acompanhei os clientes após a implantação.",
           "Modelei e otimizei bases SQL Server para consultas complexas, reduzindo o tempo de resposta em ~35%.",
+          "Prestei suporte N2/N3 às aplicações que construí: investigação de incidentes, análise de logs e consultas SQL, e correção de falhas em produção.",
           "Desenvolvi e integrei mais de 30 endpoints de APIs REST e serviços de negócio.",
-          "Stack: C#/.NET, SQL Server, NestJS, React, Flutter, REST APIs.",
+          "Stack: C#/.NET, SQL Server, NestJS, React, Flutter, REST APIs, Treinamento.",
         ],
       },
 
       {
         company: "Goodbom Supermercados",
-        role: "Software Engineer — Mobile (Flutter) e Full Stack",
+        role: "Software Engineer Full Stack e Mobile",
         period: "04/2024 - 11/2025",
         location: "Sumaré, SP",
         description: [
           "Desenvolvi e mantive mais de 50 APIs e serviços em produção com NestJS, Spring Boot e Java legado.",
           "Implementei mais de 5 aplicações web e mobile com Next.js, Astro e Flutter.",
-          "Apliquei Clean Architecture e MVVM em ~40% da base de código, reduzindo acoplamento e facilitando a manutenção.",
+          "Realizei levantamento de necessidades com as áreas de operação, parametrizei o sistema e conduzi treinamentos das equipes para uso das aplicações implantadas.",
+          "Documentei processos e atividades realizadas durante a implantação e acompanhei os clientes remotamente após a entrega.",
+          "Atuei no suporte N2/N3 das aplicações em produção, investigando incidentes, analisando logs e consultas SQL e entregando correções.",
           "Otimizei o processamento de pedidos em 40%, mantendo estabilidade com mais de 2.000 transações diárias.",
-          "Integrei PostgreSQL e OracleDB garantindo consistência transacional e confiabilidade dos dados.",
-          "Stack: NestJS, Spring Boot, Java, Next.js, Astro, Flutter, PostgreSQL, OracleDB, Clean Architecture, MVVM.",
+          "Stack: NestJS, Spring Boot, Java, Next.js, Astro, Flutter, PostgreSQL, OracleDB, Treinamento.",
         ],
       },
 
       {
         company: "Freelance",
-        role: "Backend Developer — Servidores de Jogos em Tempo Real",
+        role: "Backend Developer Servidores para Jogos em Tempo Real",
         period: "04/2025 - 05/2026",
         location: "Remoto",
         description: [
@@ -337,37 +390,40 @@ const data: AppData = {
 
       {
         company: "Desktopi",
-        role: "Desenvolvedor Mobile (Flutter)",
+        role: "Desenvolvedor Mobile",
         period: "01/2023 - 03/2024",
         location: "São Mateus do Sul, PR",
         description: [
           "Arquitetei um aplicativo mobile multiplataforma em Flutter com estratégia Offline First, atendendo mais de 40 usuários ativos.",
           "Integrei mais de 20 APIs REST e sistemas legados em Delphi, garantindo compatibilidade total.",
+          "Realizei treinamento de usuários para uso do app em campo, com foco em geolocalização e acompanhamento de dispositivos, e documentei os procedimentos de uso.",
           "Implementei geolocalização, criação de rotas e acompanhamento de dispositivos em tempo real com latência inferior a 2s.",
           "Administrei e mantive mais de 3 servidores Linux com 99,5% de uptime.",
-          "Stack: Flutter, Offline First, REST APIs, Delphi, Linux.",
+          "Stack: Flutter, Offline First, REST APIs, Delphi, Linux, Treinamento.",
         ],
       },
 
       {
         company: "Tecno Portas",
-        role: "Desenvolvedor Mobile (Flutter) e Front-end",
+        role: "Desenvolvedor Mobile e Front-end",
         period: "03/2021 - 12/2022",
         location: "Arujá, SP",
         description: [
           "Desenvolvi aplicações mobile em Flutter para iOS e Android.",
+          "Implantei as aplicações junto aos usuários internos, conduzi treinamentos de uso e apoiei na adoção das ferramentas.",
           "Construí mais de 5 landing pages e aplicações web com React, TypeScript e PHP, com foco em performance e SEO (PageSpeed 90+).",
-          "Stack: Flutter, React, TypeScript, PHP, WordPress, SEO.",
+          "Stack: Flutter, React, TypeScript, PHP, WordPress, SEO, Treinamento.",
         ],
       },
 
       {
         company: "2eBrain Studios",
-        role: "Desenvolvedor Mobile (React Native) e PHP",
+        role: "Desenvolvedor Mobile e PHP",
         period: "02/2020 - 11/2020",
         location: "São Paulo, SP",
         description: [
           "Evoluí um aplicativo de transporte sob demanda, com geolocalização em tempo real e matching entre motoristas e passageiros.",
+          "Apoiei a implantação do app junto aos usuários, coletando feedback e ajustando fluxos.",
           "Stack: React Native, PHP, Geolocalização.",
         ],
       },
@@ -379,7 +435,8 @@ const data: AppData = {
         location: "São Paulo, SP",
         description: [
           "Prestei suporte técnico e manutenção de mais de 50 computadores, redes e servidores, com 95% de resolução no mesmo dia.",
-          "Stack: Suporte Técnico, Redes, Servidores, Web Design.",
+          "Realizei treinamento de usuários para uso de sistemas internos e documentei procedimentos de suporte.",
+          "Stack: Suporte Técnico, Redes, Servidores, Web Design, Treinamento.",
         ],
       },
     ],
@@ -388,16 +445,17 @@ const data: AppData = {
       {
         course: "Análise e Desenvolvimento de Sistemas",
         institution: "Descomplica",
-        year: "2026 - 2030",
+        year: "2026 - Atual",
       },
     ],
 
     languages: [
       { language: "Português", detail: "Nativo" },
-      { language: "Inglês", detail: "Técnico" },
     ],
 
     courses: [
+      { course: "Formação em IA para Devs (30h+, com certificado)", institution: "Rocketseat", year: "" },
+      { course: "Produtividade com IA: Codeium, GitHub Copilot e Amazon CodeWhisperer", institution: "Rocketseat", year: "" },
       { course: "Segurança da Informação", institution: "Estudos autônomos", year: "2026" },
       { course: "Pentest e Ethical Hacking", institution: "Estudos autônomos", year: "2026" },
       { course: "Elastic Stack (Elasticsearch, Logstash, Kibana)", institution: "Estudos autônomos", year: "2026" },
